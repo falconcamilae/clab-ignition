@@ -24,8 +24,8 @@ export function Footer() {
           <div>
             <h4 className="text-xs uppercase tracking-widest text-white/40 mb-4">Contacto</h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2"><Mail size={14}/> [hola@intheclab.com]</li>
-              <li className="flex items-center gap-2"><Instagram size={14}/> [@intheclab]</li>
+              <li className="flex items-center gap-2"><Mail size={14}/> contacto@intheclab.com</li>
+              <li className="flex items-center gap-2"><Instagram size={14}/> @clabvision</li>
               <li className="text-white/60">Málaga, España</li>
             </ul>
           </div>

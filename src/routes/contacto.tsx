@@ -55,14 +55,14 @@ export default function Contacto() {
                 <Mail size={20} className="mt-1"/>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-white/40">Email</p>
-                  <p className="mt-1">[hola@intheclab.com]</p>
+                  <p className="mt-1">contacto@intheclab.com</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
                 <Instagram size={20} className="mt-1"/>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-white/40">Instagram</p>
-                  <p className="mt-1">[@intheclab]</p>
+                  <p className="mt-1">@clabvision</p>
                 </div>
               </li>
             </ul>
