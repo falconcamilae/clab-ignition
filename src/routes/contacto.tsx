@@ -28,7 +28,7 @@ export default function Contacto() {
 
   return (
     <div className="bg-black text-white min-h-screen">
-      <Navbar invert />
+      <Navbar />
 
       <section className="pt-40 pb-16 md:pt-52 md:pb-20 px-5 md:px-10 border-b border-white/10">
         <div className="mx-auto max-w-7xl">
