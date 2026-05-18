@@ -53,7 +53,7 @@ export default function Contacto() {
                 <Instagram size={20} className="mt-1"/>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-white/40">Instagram</p>
-                  <p className="mt-1">@clabvision</p>
+                  <p className="mt-1">@wearclab</p>
                 </div>
               </li>
             </ul>
