@@ -40,7 +40,7 @@ export default function Home() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
+          className="absolute inset-0 w-full h-full object-cover opacity-50 grayscale"
           poster="/media/bk-trainer.jpg"
         >
           <source src="/media/bk.mp4" type="video/mp4" />
@@ -122,7 +122,7 @@ export default function Home() {
             Trabajos que <span className="italic font-light">respiran deporte.</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-px bg-black">
-            {["bro.mp4", "brost.mp4", "psg.mp4"].map((src, i) => (
+            {["bro.mp4", "psg.mp4", "brost.mp4"].map((src, i) => (
               <motion.div
                 key={src}
                 initial={{ opacity: 0 }}
@@ -136,7 +136,7 @@ export default function Home() {
                   muted
                   loop
                   playsInline
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-full object-cover group-hover:grayscale transition-all duration-700"
                 >
                   <source src={`/media/${src}`} type="video/mp4" />
                 </video>
@@ -149,40 +149,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY CLAB */}
-      <section className="py-24 md:py-32 px-5 md:px-10 border-t border-black/10">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-20">
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-4">Por qué Clab</p>
-              <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight leading-[0.95]">
-                Una agencia hecha <span className="italic font-light">por gente del deporte.</span>
-              </h2>
-              <img src="/media/jersey-wall.jpg" alt="Camisetas de equipos" className="mt-10 w-full aspect-[4/5] object-cover grayscale" />
-            </div>
-            <div>
-              {reasons.map((r, i) => (
-                <motion.div
-                  key={r[0]}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="py-8 border-b border-black/10 first:border-t"
-                >
-                  <div className="flex items-baseline gap-6">
-                    <span className="text-xs font-mono text-black/40">0{i+1}</span>
-                    <div>
-                      <h3 className="text-2xl md:text-3xl font-bold uppercase">{r[0]}</h3>
-                      <p className="mt-3 text-base text-black/60 leading-relaxed">{r[1]}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* PLANS */}
       <section className="bg-black text-white py-24 md:py-32 px-5 md:px-10">
