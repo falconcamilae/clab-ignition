@@ -1,9 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useForm } from "@formspree/react";
 import { Instagram, Mail, MapPin, Send } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { toast } from "sonner";
 
 export const Route = createFileRoute("/contacto")({
   component: Contacto,
@@ -16,15 +15,7 @@ export const Route = createFileRoute("/contacto")({
 });
 
 export default function Contacto() {
-  const [sent, setSent] = useState(false);
-
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setSent(true);
-    toast.success("Mensaje recibido. Te contactamos en menos de 24h.");
-    (e.target as HTMLFormElement).reset();
-    setTimeout(() => setSent(false), 4000);
-  }
+  const [state, handleSubmit] = useForm("mlgvddrz");
 
   return (
     <div className="bg-black text-white min-h-screen">
@@ -74,37 +65,47 @@ export default function Contacto() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="border border-white/15 p-6 md:p-10 bg-white/[0.02]">
-            <div className="grid gap-5">
-              <Field label="Nombre">
-                <input required name="name" type="text" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
-              </Field>
-              <Field label="Email">
-                <input required name="email" type="email" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
-              </Field>
-              <Field label="Teléfono">
-                <input name="phone" type="tel" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
-              </Field>
-              <Field label="Plan de interés">
-                <select name="plan" className="bg-black border-b border-white/30 py-3 focus:outline-none focus:border-white">
-                  <option>Básico</option>
-                  <option>Medio</option>
-                  <option>Premium</option>
-                  <option>No lo tengo claro</option>
-                </select>
-              </Field>
-              <Field label="Cuéntanos tu proyecto">
-                <textarea required name="message" rows={4} className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white resize-none" />
-              </Field>
-              <button
-                type="submit"
-                disabled={sent}
-                className="mt-4 inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-5 text-sm uppercase tracking-widest font-semibold hover:bg-white/90 disabled:opacity-60"
-              >
-                {sent ? "Enviado ✓" : <>Enviar mensaje <Send size={16}/></>}
-              </button>
+          {state.succeeded ? (
+            <div className="border border-white/15 p-6 md:p-10 bg-white/[0.02] flex flex-col items-center justify-center text-center">
+              <p className="text-3xl md:text-4xl font-bold uppercase tracking-tight mb-4">Perfecto.</p>
+              <p className="text-lg text-white/70">Os contactamos pronto.</p>
             </div>
-          </form>
+          ) : (
+            <form onSubmit={handleSubmit} className="border border-white/15 p-6 md:p-10 bg-white/[0.02]">
+              <div className="grid gap-5">
+                <Field label="Nombre">
+                  <input required name="nombre" type="text" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
+                </Field>
+                <Field label="Club">
+                  <input required name="club" type="text" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
+                </Field>
+                <Field label="Email">
+                  <input required name="email" type="email" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
+                </Field>
+                <Field label="Teléfono">
+                  <input name="telefono" type="tel" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
+                </Field>
+                <Field label="Plan de interés">
+                  <select name="plan" className="bg-black border-b border-white/30 py-3 focus:outline-none focus:border-white">
+                    <option>Básico</option>
+                    <option>Medio</option>
+                    <option>Premium</option>
+                    <option>No lo tengo claro</option>
+                  </select>
+                </Field>
+                <Field label="Cuéntanos tu proyecto">
+                  <textarea required name="mensaje" rows={4} className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white resize-none" />
+                </Field>
+                <button
+                  type="submit"
+                  disabled={state.submitting}
+                  className="mt-4 inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-5 text-sm uppercase tracking-widest font-semibold hover:bg-white/90 disabled:opacity-60"
+                >
+                  {state.submitting ? "Enviando..." : <>Enviar mensaje <Send size={16}/></>}
+                </button>
+              </div>
+            </form>
+          )}
         </div>
       </section>
 
