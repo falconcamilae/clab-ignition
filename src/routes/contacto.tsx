@@ -103,6 +103,13 @@ export default function Contacto() {
                 >
                   {state.submitting ? "Enviando..." : <>Enviar mensaje <Send size={16}/></>}
                 </button>
+                {state.errors && (
+                  <div className="mt-2 text-sm text-red-400">
+                    {Array.isArray((state.errors as any)?.formErrors) && (state.errors as any).formErrors.length > 0
+                      ? (state.errors as any).formErrors.map((e: any, i: number) => <p key={i}>{e.message}</p>)
+                      : <p>Ha ocurrido un error. Inténtalo de nuevo.</p>}
+                  </div>
+                )}
               </div>
             </form>
           )}
