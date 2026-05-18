@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
         <div className="grid md:grid-cols-3 gap-12">
           <div>
-            <Logo invert />
+            <img src="/media/logo-clab.png" alt="In The Clab" className="h-8 md:h-10 w-auto" />
             <p className="mt-6 text-sm text-white/60 max-w-xs leading-relaxed">
               La pasión ya está. Nosotros la hacemos visible.
             </p>
