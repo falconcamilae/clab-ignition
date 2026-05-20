@@ -111,9 +111,10 @@ export function Navbar() {
                 <button
                   key={l.code}
                   onClick={() => setLang(l.code as Lang)}
-                  className={`text-sm uppercase tracking-widest px-3 py-1 border ${lang === l.code ? "bg-white text-black border-white" : "border-white/40 hover:bg-white hover:text-black"}`}
+                  className={`flex items-center gap-2 text-sm uppercase tracking-widest px-3 py-1 border ${lang === l.code ? "bg-white text-black border-white" : "border-white/40 hover:bg-white hover:text-black"}`}
                 >
-                  {l.label}
+                  <span className="text-base leading-none">{l.flag}</span>
+                  <span>{l.label}</span>
                 </button>
               ))}
             </div>
