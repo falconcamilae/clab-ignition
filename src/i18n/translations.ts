@@ -1,9 +1,9 @@
 export type Lang = "es" | "en" | "it";
 
-export const LANGS: { code: Lang; label: string }[] = [
-  { code: "es", label: "ES" },
-  { code: "en", label: "EN" },
-  { code: "it", label: "IT" },
+export const LANGS: { code: Lang; label: string; flag: string }[] = [
+  { code: "es", label: "ES", flag: "🇪🇸" },
+  { code: "en", label: "EN", flag: "🇬🇧" },
+  { code: "it", label: "IT", flag: "🇮🇹" },
 ];
 
 export const translations = {
