@@ -1,22 +1,55 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
-
-const links = [
-  { to: "/", label: "Inicio" },
-  { to: "/servicios", label: "Servicios" },
-  { to: "/planes", label: "Planes" },
-  { to: "/nosotros", label: "Nosotros" },
-  { to: "/contacto", label: "Contacto" },
-] as const;
+import { Menu, X, Globe } from "lucide-react";
+import { useI18n } from "@/i18n/I18nProvider";
+import { LANGS, type Lang } from "@/i18n/translations";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const location = useLocation();
+  const { lang, setLang, t } = useI18n();
 
   useEffect(() => {
     setOpen(false);
+    setLangOpen(false);
   }, [location.pathname]);
+
+  const links = [
+    { to: "/", label: t<string>("nav.inicio") },
+    { to: "/servicios", label: t<string>("nav.servicios") },
+    { to: "/planes", label: t<string>("nav.planes") },
+    { to: "/nosotros", label: t<string>("nav.nosotros") },
+    { to: "/contacto", label: t<string>("nav.contacto") },
+  ] as const;
+
+  const LangSwitcher = ({ mobile = false }: { mobile?: boolean }) => (
+    <div className="relative">
+      <button
+        onClick={() => setLangOpen((v) => !v)}
+        className={`flex items-center gap-2 ${mobile ? "text-base" : "text-xs"} uppercase tracking-widest font-medium text-white hover:opacity-60`}
+        aria-label="Language"
+      >
+        <Globe size={mobile ? 18 : 14} /> {lang.toUpperCase()}
+      </button>
+      {langOpen && (
+        <div className="absolute right-0 mt-2 bg-black border border-white/15 min-w-[80px] z-50">
+          {LANGS.map((l) => (
+            <button
+              key={l.code}
+              onClick={() => {
+                setLang(l.code as Lang);
+                setLangOpen(false);
+              }}
+              className={`block w-full text-left px-4 py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-black ${lang === l.code ? "font-bold" : ""}`}
+            >
+              {l.label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 
   return (
     <>
@@ -36,14 +69,18 @@ export function Navbar() {
                 {l.label}
               </Link>
             ))}
+            <LangSwitcher />
           </nav>
-          <button
-            className="md:hidden text-white"
-            onClick={() => setOpen(true)}
-            aria-label="Abrir menú"
-          >
-            <Menu size={26} />
-          </button>
+          <div className="flex items-center gap-4 md:hidden">
+            <LangSwitcher mobile />
+            <button
+              className="text-white"
+              onClick={() => setOpen(true)}
+              aria-label="Open menu"
+            >
+              <Menu size={26} />
+            </button>
+          </div>
         </div>
       </header>
 
@@ -53,7 +90,7 @@ export function Navbar() {
             <Link to="/" aria-label="In The Clab" className="flex items-center">
               <img src="/media/logo-clab.png" alt="In The Clab" className="h-8 md:h-10 w-auto" />
             </Link>
-            <button onClick={() => setOpen(false)} aria-label="Cerrar menú">
+            <button onClick={() => setOpen(false)} aria-label="Close menu">
               <X size={28} />
             </button>
           </div>
@@ -68,6 +105,17 @@ export function Navbar() {
                 {l.label}
               </Link>
             ))}
+            <div className="mt-6 flex gap-4">
+              {LANGS.map((l) => (
+                <button
+                  key={l.code}
+                  onClick={() => setLang(l.code as Lang)}
+                  className={`text-sm uppercase tracking-widest px-3 py-1 border ${lang === l.code ? "bg-white text-black border-white" : "border-white/40 hover:bg-white hover:text-black"}`}
+                >
+                  {l.label}
+                </button>
+              ))}
+            </div>
           </nav>
         </div>
       )}
