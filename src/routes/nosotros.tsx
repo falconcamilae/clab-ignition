@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { useI18n } from "@/i18n/I18nProvider";
 
 export const Route = createFileRoute("/nosotros")({
   component: Nosotros,
@@ -13,23 +14,20 @@ export const Route = createFileRoute("/nosotros")({
   }),
 });
 
-const values = [
-  ["Pasión", "Vivimos lo que comunicamos."],
-  ["Foco", "Solo deporte. Sin excepciones."],
-  ["Cercanía", "Hablamos con el club, no para el club."],
-  ["Resultado", "Métricas, crecimiento, comunidad."],
-];
-
 export default function Nosotros() {
+  const { t } = useI18n();
+  const paragraphs = t<string[]>("nosotros.paragraphs");
+  const values = t<[string, string][]>("nosotros.values");
+
   return (
     <div className="bg-white text-black">
       <Navbar />
 
       <section className="pt-40 pb-20 md:pt-52 md:pb-28 px-5 md:px-10 border-b border-black/10">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-6">Nosotros</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-6">{t<string>("nosotros.label")}</p>
           <h1 className="text-5xl md:text-8xl font-bold uppercase tracking-tight leading-[0.95]">
-            Una agencia <span className="italic font-light">con escudo.</span>
+            {t<string>("nosotros.title1")} <span className="italic font-light">{t<string>("nosotros.title2")}</span>
           </h1>
         </div>
       </section>
@@ -40,20 +38,14 @@ export default function Nosotros() {
             <img src="/media/bk-trainer.jpg" alt="Entrenador en el campo" className="w-full aspect-[4/5] object-cover grayscale" />
           </div>
           <div className="flex flex-col justify-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-4">Quiénes somos</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-4">{t<string>("nosotros.sectionLabel")}</p>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-              Clab nace en Málaga, entre <span className="italic font-light">balones, cámaras y datos.</span>
+              {t<string>("nosotros.heading1")} <span className="italic font-light">{t<string>("nosotros.heading2")}</span>
             </h2>
             <div className="mt-8 space-y-5 text-base md:text-lg text-black/70 leading-relaxed">
-              <p>
-                Somos un equipo joven que entendió algo simple: los clubes y academias deportivas no necesitan una agencia más. Necesitan una agencia que respire fútbol.
-              </p>
-              <p>
-                Por eso solo trabajamos con deporte. Porque entendemos las cantera, la grada, los lunes después de perder y los domingos después de ganar.
-              </p>
-              <p>
-                La pasión ya está. Nosotros la hacemos visible.
-              </p>
+              {paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
           </div>
         </div>
@@ -61,9 +53,9 @@ export default function Nosotros() {
 
       <section className="bg-black text-white py-24 md:py-32 px-5 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">Valores</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">{t<string>("nosotros.valuesLabel")}</p>
           <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight mb-16">
-            Lo que nos mueve.
+            {t<string>("nosotros.valuesTitle")}
           </h2>
           <div className="grid md:grid-cols-4 gap-px bg-white/10">
             {values.map((v) => (
@@ -77,9 +69,9 @@ export default function Nosotros() {
       </section>
 
       <section className="py-24 md:py-32 px-5 md:px-10 text-center">
-        <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">¿Hablamos?</h2>
+        <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">{t<string>("nosotros.ctaTitle")}</h2>
         <Link to="/contacto" className="mt-10 inline-flex items-center gap-3 bg-black text-white px-8 py-5 text-sm uppercase tracking-widest font-semibold hover:bg-black/80">
-          Contacto <ArrowRight size={16}/>
+          {t<string>("nosotros.ctaBtn")} <ArrowRight size={16}/>
         </Link>
       </section>
 

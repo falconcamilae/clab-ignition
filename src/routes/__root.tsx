@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import { Toaster } from "@/components/ui/sonner";
+import { I18nProvider } from "@/i18n/I18nProvider";
 
 import appCss from "../styles.css?url";
 
@@ -121,8 +122,10 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
-      <Toaster position="bottom-right" theme="dark" />
+      <I18nProvider>
+        <Outlet />
+        <Toaster position="bottom-right" theme="dark" />
+      </I18nProvider>
     </QueryClientProvider>
   );
 }
