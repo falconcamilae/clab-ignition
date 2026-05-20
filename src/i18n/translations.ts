@@ -1,9 +1,9 @@
 export type Lang = "es" | "en" | "it";
 
-export const LANGS: { code: Lang; label: string }[] = [
-  { code: "es", label: "ES" },
-  { code: "en", label: "EN" },
-  { code: "it", label: "IT" },
+export const LANGS: { code: Lang; label: string; flag: string }[] = [
+  { code: "es", label: "ES", flag: "🇪🇸" },
+  { code: "en", label: "EN", flag: "🇬🇧" },
+  { code: "it", label: "IT", flag: "🇮🇹" },
 ];
 
 export const translations = {
@@ -78,7 +78,7 @@ export const translations = {
           d: "Web, SEO local, Google Business, captación de socios y jugadores. Que cuando alguien busque entrenar en su barrio, te encuentre primero.",
           items: [
             { t: "Web institucional", d: "Diseñamos webs claras, rápidas y pensadas para captar — la cara digital que tu club merece." },
-            { t: "SEO local Málaga", d: "Posicionamos tu club en las búsquedas de tu zona para que aparezcas antes que nadie cuando alguien busque dónde entrenar." },
+            { t: "SEO local", d: "Posicionamos tu club en las búsquedas de tu zona para que aparezcas antes que nadie cuando alguien busque dónde entrenar." },
             { t: "Google Business", d: "Configuramos y optimizamos tu ficha de Google para que tu club se encuentre fácil en mapas y búsquedas locales." },
             { t: "Captación de leads", d: "Diseñamos campañas y embudos para captar nuevos socios, jugadores y familias interesadas en tu proyecto." },
           ],
@@ -243,7 +243,7 @@ export const translations = {
           d: "Web, local SEO, Google Business, member and player acquisition. So when someone searches for training in their neighborhood, they find you first.",
           items: [
             { t: "Institutional website", d: "We design clear, fast websites built to convert — the digital face your club deserves." },
-            { t: "Local SEO Málaga", d: "We position your club in local searches so you show up first when someone looks for where to train." },
+            { t: "Local SEO", d: "We position your club in local searches so you show up first when someone looks for where to train." },
             { t: "Google Business", d: "We set up and optimize your Google profile so your club is easy to find on maps and local searches." },
             { t: "Lead acquisition", d: "We design campaigns and funnels to bring in new members, players and families interested in your project." },
           ],
@@ -408,7 +408,7 @@ export const translations = {
           d: "Web, SEO locale, Google Business, acquisizione di soci e giocatori. Così quando qualcuno cerca dove allenarsi nel suo quartiere, ti trova per primo.",
           items: [
             { t: "Sito istituzionale", d: "Disegniamo siti chiari, veloci e pensati per convertire — il volto digitale che il tuo club merita." },
-            { t: "SEO locale Málaga", d: "Posizioniamo il tuo club nelle ricerche locali per apparire prima di tutti quando qualcuno cerca dove allenarsi." },
+            { t: "SEO locale", d: "Posizioniamo il tuo club nelle ricerche locali per apparire prima di tutti quando qualcuno cerca dove allenarsi." },
             { t: "Google Business", d: "Configuriamo e ottimizziamo la tua scheda Google così il tuo club si trova facilmente su mappe e ricerche locali." },
             { t: "Acquisizione lead", d: "Disegniamo campagne e funnel per portare nuovi soci, giocatori e famiglie interessate al tuo progetto." },
           ],

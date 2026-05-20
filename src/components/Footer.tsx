@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 import { useI18n } from "@/i18n/I18nProvider";
 
 export function Footer() {
@@ -26,15 +26,28 @@ export function Footer() {
           <div>
             <h4 className="text-xs uppercase tracking-widest text-white/40 mb-4">{t<string>("footer.contact")}</h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2"><Mail size={14}/><span>contacto@intheclab.com</span></li>
-              <li className="flex items-center gap-2"><Instagram size={14}/><span>@wearclab</span></li>
+              <li>
+                <a href="mailto:contacto@intheclab.com" className="flex items-center gap-2 hover:opacity-60">
+                  <Mail size={14}/><span>contacto@intheclab.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/weareclab" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:opacity-60">
+                  <Instagram size={14}/><span>@weareclab</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/weareclab" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:opacity-60">
+                  <Linkedin size={14}/><span>weareclab</span>
+                </a>
+              </li>
               <li className="text-white/60">{t<string>("contacto.locationVal")}</li>
             </ul>
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-xs text-white/40 gap-2">
           <span>© {new Date().getFullYear()} In The Clab. {t<string>("footer.rights")}</span>
-          <span>[intheclab.com]</span>
+          <a href="https://www.clabagency.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">[www.clabagency.com]</a>
         </div>
       </div>
     </footer>

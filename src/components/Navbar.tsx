@@ -33,7 +33,7 @@ export function Navbar() {
         <Globe size={mobile ? 18 : 14} /> {lang.toUpperCase()}
       </button>
       {langOpen && (
-        <div className="absolute right-0 mt-2 bg-black border border-white/15 min-w-[80px] z-50">
+        <div className="absolute right-0 mt-2 bg-white border border-black/10 min-w-[120px] z-50 shadow-lg">
           {LANGS.map((l) => (
             <button
               key={l.code}
@@ -41,9 +41,10 @@ export function Navbar() {
                 setLang(l.code as Lang);
                 setLangOpen(false);
               }}
-              className={`block w-full text-left px-4 py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-black ${lang === l.code ? "font-bold" : ""}`}
+              className={`flex items-center gap-3 w-full text-left px-4 py-2 text-xs uppercase tracking-widest text-black hover:bg-black hover:text-white transition-colors ${lang === l.code ? "font-bold" : ""}`}
             >
-              {l.label}
+              <span className="text-base leading-none">{l.flag}</span>
+              <span>{l.label}</span>
             </button>
           ))}
         </div>
@@ -110,9 +111,10 @@ export function Navbar() {
                 <button
                   key={l.code}
                   onClick={() => setLang(l.code as Lang)}
-                  className={`text-sm uppercase tracking-widest px-3 py-1 border ${lang === l.code ? "bg-white text-black border-white" : "border-white/40 hover:bg-white hover:text-black"}`}
+                  className={`flex items-center gap-2 text-sm uppercase tracking-widest px-3 py-1 border ${lang === l.code ? "bg-white text-black border-white" : "border-white/40 hover:bg-white hover:text-black"}`}
                 >
-                  {l.label}
+                  <span className="text-base leading-none">{l.flag}</span>
+                  <span>{l.label}</span>
                 </button>
               ))}
             </div>
