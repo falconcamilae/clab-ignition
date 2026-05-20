@@ -149,19 +149,19 @@ export default function Home() {
           <p className="text-sm md:text-base text-white/60 max-w-3xl mb-16 leading-relaxed">
             {t<string>("home.plansSubtext")}
           </p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 items-stretch">
             {plans.map((p, i) => {
               const highlighted = i === 1;
               return (
                 <div
                   key={p.n}
-                  className={`p-8 md:p-10 border ${highlighted ? "bg-white text-black border-white" : "border-white/20"}`}
+                  className={`p-8 md:p-10 border flex flex-col h-full ${highlighted ? "bg-white text-black border-white" : "border-white/20"}`}
                 >
                   <h3 className="text-sm uppercase tracking-widest font-semibold opacity-70">{p.n}</h3>
                   <div className="mt-6">
                     <span className="text-3xl md:text-4xl font-bold leading-tight">{p.p}</span>
                   </div>
-                  <Link to="/contacto" className={`mt-8 inline-flex items-center gap-2 text-sm uppercase tracking-widest font-semibold border px-5 py-3 ${highlighted ? "border-black hover:bg-black hover:text-white" : "border-white hover:bg-white hover:text-black"}`}>
+                  <Link to="/planes" className={`mt-auto pt-8 self-start inline-flex items-center gap-2 text-sm uppercase tracking-widest font-semibold border px-5 py-3 ${highlighted ? "border-black hover:bg-black hover:text-white" : "border-white hover:bg-white hover:text-black"}`}>
                     {t<string>("home.planCta")} <ArrowRight size={14}/>
                   </Link>
                 </div>
