@@ -60,7 +60,7 @@ export default function Planes() {
 
       <section className="py-20 md:py-28 px-5 md:px-10 border-t border-black/10">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-6">{t<string>("planes.label")}</p>
+          
           <h1 className="text-5xl md:text-8xl font-bold uppercase tracking-tight leading-[0.95]">
             {t<string>("planes.title1")} <span className="italic font-light">{t<string>("planes.title2")}</span>
           </h1>
