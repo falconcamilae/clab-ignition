@@ -50,14 +50,21 @@ export default function Contacto() {
                 <Mail size={20} className="mt-1"/>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-white/40">{t<string>("contacto.email")}</p>
-                  <p className="mt-1">contacto@intheclab.com</p>
+                  <a href="mailto:contacto@intheclab.com" className="mt-1 inline-block hover:opacity-70">contacto@intheclab.com</a>
                 </div>
               </li>
               <li className="flex items-start gap-4">
                 <Instagram size={20} className="mt-1"/>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-white/40">{t<string>("contacto.instagram")}</p>
-                  <p className="mt-1">@wearclab</p>
+                  <a href="https://instagram.com/weareclab" target="_blank" rel="noopener noreferrer" className="mt-1 inline-block hover:opacity-70">@weareclab</a>
+                </div>
+              </li>
+              <li className="flex items-start gap-4">
+                <Linkedin size={20} className="mt-1"/>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-white/40">LinkedIn</p>
+                  <a href="https://www.linkedin.com/company/weareclab" target="_blank" rel="noopener noreferrer" className="mt-1 inline-block hover:opacity-70">weareclab</a>
                 </div>
               </li>
             </ul>
