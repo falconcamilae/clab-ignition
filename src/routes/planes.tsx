@@ -24,19 +24,7 @@ export default function Planes() {
     <div className="bg-white text-black min-h-screen">
       <Navbar />
 
-      <section className="pt-40 pb-16 md:pt-52 md:pb-20 px-5 md:px-10 border-b border-black/10">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-6">{t<string>("planes.label")}</p>
-          <h1 className="text-5xl md:text-8xl font-bold uppercase tracking-tight leading-[0.95]">
-            {t<string>("planes.title1")} <span className="italic font-light">{t<string>("planes.title2")}</span>
-          </h1>
-          <p className="mt-8 max-w-2xl text-lg text-black/60">
-            {t<string>("planes.lead")}
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-28 px-5 md:px-10">
+      <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-5 md:px-10">
         <div className="mx-auto max-w-7xl grid md:grid-cols-3 gap-6">
           {plans.map((p, i) => {
             const h = i === 1;
@@ -67,6 +55,18 @@ export default function Planes() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <section className="py-20 md:py-28 px-5 md:px-10 border-t border-black/10">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-6">{t<string>("planes.label")}</p>
+          <h1 className="text-5xl md:text-8xl font-bold uppercase tracking-tight leading-[0.95]">
+            {t<string>("planes.title1")} <span className="italic font-light">{t<string>("planes.title2")}</span>
+          </h1>
+          <p className="mt-8 max-w-2xl text-lg text-black/60">
+            {t<string>("planes.lead")}
+          </p>
         </div>
       </section>
 

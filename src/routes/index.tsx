@@ -161,9 +161,11 @@ export default function Home() {
                   <div className="mt-6">
                     <span className="text-3xl md:text-4xl font-bold leading-tight">{p.p}</span>
                   </div>
-                  <Link to="/planes" className={`mt-auto pt-8 self-start inline-flex items-center gap-2 text-sm uppercase tracking-widest font-semibold border px-5 py-3 ${highlighted ? "border-black hover:bg-black hover:text-white" : "border-white hover:bg-white hover:text-black"}`}>
-                    {t<string>("home.planCta")} <ArrowRight size={14}/>
-                  </Link>
+                  <div className="mt-auto pt-8">
+                    <Link to="/planes" className={`self-start inline-flex items-center gap-2 text-sm uppercase tracking-widest font-semibold border px-5 py-2 ${highlighted ? "border-black hover:bg-black hover:text-white" : "border-white hover:bg-white hover:text-black"}`}>
+                      {t<string>("home.planCta")} <ArrowRight size={14}/>
+                    </Link>
+                  </div>
                 </div>
               );
             })}
