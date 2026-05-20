@@ -408,7 +408,7 @@ export const translations = {
           d: "Web, SEO locale, Google Business, acquisizione di soci e giocatori. Così quando qualcuno cerca dove allenarsi nel suo quartiere, ti trova per primo.",
           items: [
             { t: "Sito istituzionale", d: "Disegniamo siti chiari, veloci e pensati per convertire — il volto digitale che il tuo club merita." },
-            { t: "SEO locale Málaga", d: "Posizioniamo il tuo club nelle ricerche locali per apparire prima di tutti quando qualcuno cerca dove allenarsi." },
+            { t: "SEO locale", d: "Posizioniamo il tuo club nelle ricerche locali per apparire prima di tutti quando qualcuno cerca dove allenarsi." },
             { t: "Google Business", d: "Configuriamo e ottimizziamo la tua scheda Google così il tuo club si trova facilmente su mappe e ricerche locali." },
             { t: "Acquisizione lead", d: "Disegniamo campagne e funnel per portare nuovi soci, giocatori e famiglie interessate al tuo progetto." },
           ],
