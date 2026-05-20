@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useForm } from "@formspree/react";
-import { Instagram, Mail, MapPin, Send } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Send } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { useI18n } from "@/i18n/I18nProvider";
