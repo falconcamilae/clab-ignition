@@ -243,7 +243,7 @@ export const translations = {
           d: "Web, local SEO, Google Business, member and player acquisition. So when someone searches for training in their neighborhood, they find you first.",
           items: [
             { t: "Institutional website", d: "We design clear, fast websites built to convert — the digital face your club deserves." },
-            { t: "Local SEO Málaga", d: "We position your club in local searches so you show up first when someone looks for where to train." },
+            { t: "Local SEO", d: "We position your club in local searches so you show up first when someone looks for where to train." },
             { t: "Google Business", d: "We set up and optimize your Google profile so your club is easy to find on maps and local searches." },
             { t: "Lead acquisition", d: "We design campaigns and funnels to bring in new members, players and families interested in your project." },
           ],
