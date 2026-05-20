@@ -3,32 +3,17 @@ import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { useI18n } from "@/i18n/I18nProvider";
 
 export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const services = [
-  { n: "01", t: "Branding", d: "Construimos identidades que se reconocen desde la grada." },
-  { n: "02", t: "Redes Sociales", d: "Contenido con energía deportiva. Constante, estratégico, real." },
-  { n: "03", t: "Optimización Digital", d: "Tu club, tu academia, tu centro — visible donde importa." },
-  { n: "04", t: "Audiovisual", d: "Vídeo y foto que transmiten lo que se vive en el campo." },
-];
-
-const reasons = [
-  ["Solo deporte", "No tocamos otros sectores. Vivimos del fútbol y para el fútbol."],
-  ["Equipo joven", "Hablamos el idioma de las nuevas generaciones de aficionados."],
-  ["Resultados visibles", "Métricas claras. Crecimiento real. Cero humo."],
-  ["Pasión propia", "Lo hacemos porque también somos parte de la grada."],
-];
-
-const plans = [
-  { n: "Básico", p: "120€", per: "/mes", h: false },
-  { n: "Medio", p: "250€", per: "/mes", h: true },
-  { n: "Premium", p: "A medida", per: "", h: false },
-];
-
 export default function Home() {
+  const { t } = useI18n();
+  const services = t<{ t: string; d: string }[]>("home.services");
+  const plans = t<{ n: string; p: string }[]>("home.plans");
+
   return (
     <div className="bg-white text-black">
       <Navbar />
@@ -53,19 +38,19 @@ export default function Home() {
             transition={{ duration: 0.9, ease: "easeOut" }}
           >
             <p className="text-xs md:text-sm uppercase tracking-[0.3em] text-white/70 mb-6">
-              Agencia de marketing deportivo · Málaga
+              {t<string>("home.heroLabel")}
             </p>
             <h1 className="text-5xl md:text-8xl lg:text-9xl font-bold leading-[0.95] tracking-tight uppercase">
-              La pasión<br/>ya está.<br/>
-              <span className="text-white/50">Nosotros la</span><br/>
-              <span className="italic font-light">hacemos visible.</span>
+              {t<string>("home.heroTitle1")}<br/>{t<string>("home.heroTitle2")}<br/>
+              <span className="text-white/50">{t<string>("home.heroTitle3")}</span><br/>
+              <span className="italic font-light">{t<string>("home.heroTitle4")}</span>
             </h1>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/contacto" className="group inline-flex items-center gap-3 bg-white text-black px-7 py-4 text-sm uppercase tracking-widest font-semibold hover:bg-white/90">
-                Trabaja con nosotros <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform"/>
+                {t<string>("home.ctaPlan")} <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform"/>
               </Link>
               <Link to="/servicios" className="inline-flex items-center gap-3 border border-white px-7 py-4 text-sm uppercase tracking-widest font-semibold hover:bg-white hover:text-black">
-                Ver servicios
+                {t<string>("home.ctaServices")}
               </Link>
             </div>
           </motion.div>
@@ -75,9 +60,9 @@ export default function Home() {
       {/* MANIFESTO */}
       <section className="py-24 md:py-40 px-5 md:px-10">
         <div className="mx-auto max-w-5xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-8">Manifiesto</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-8">{t<string>("home.manifestoLabel")}</p>
           <h2 className="text-3xl md:text-6xl font-bold leading-tight tracking-tight">
-            En el deporte no se vende. <span className="text-black/40">Se contagia.</span> Nosotros somos el altavoz de lo que ya late dentro del club.
+            {t<string>("home.manifesto")}
           </h2>
         </div>
       </section>
@@ -87,24 +72,24 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">Qué hacemos</p>
-              <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">Servicios</h2>
+              <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">{t<string>("home.servicesLabel")}</p>
+              <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">{t<string>("home.servicesTitle")}</h2>
             </div>
             <Link to="/servicios" className="inline-flex items-center gap-2 text-sm uppercase tracking-widest hover:opacity-60">
-              Ver todos <ArrowUpRight size={16}/>
+              {t<string>("home.viewAll")} <ArrowUpRight size={16}/>
             </Link>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
             {services.map((s, i) => (
               <motion.div
-                key={s.n}
+                key={s.t}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="bg-black p-8 md:p-10 hover:bg-white hover:text-black transition-colors duration-500 group cursor-default"
               >
-                <span className="text-xs font-mono opacity-50">{s.n}</span>
+                <span className="text-xs font-mono opacity-50">{String(i + 1).padStart(2, "0")}</span>
                 <h3 className="mt-6 text-2xl md:text-3xl font-bold uppercase">{s.t}</h3>
                 <p className="mt-4 text-sm leading-relaxed opacity-70 group-hover:opacity-100">{s.d}</p>
                 <ArrowUpRight size={20} className="mt-8 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"/>
@@ -117,9 +102,9 @@ export default function Home() {
       {/* VIDEO SHOWCASE */}
       <section className="py-24 md:py-32 px-5 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-4">Lo que se vive</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-4">{t<string>("home.videoLabel")}</p>
           <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight mb-12 max-w-3xl">
-            Trabajos que <span className="italic font-light">respiran deporte.</span>
+            {t<string>("home.videoTitle1")} <span className="italic font-light">{t<string>("home.videoTitle2")}</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-px bg-black">
             {["bro.mp4", "psg.mp4", "brost.mp4"].map((src, i) => (
@@ -149,35 +134,39 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* PLANS */}
       <section className="bg-black text-white py-24 md:py-32 px-5 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-6">
             <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">Planes</p>
-              <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">Trabaja con Clab</h2>
+              <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">{t<string>("home.plansLabel")}</p>
+              <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">{t<string>("home.plansTitle")}</h2>
             </div>
             <Link to="/planes" className="inline-flex items-center gap-2 text-sm uppercase tracking-widest hover:opacity-60">
-              Ver detalle <ArrowUpRight size={16}/>
+              {t<string>("home.viewDetail")} <ArrowUpRight size={16}/>
             </Link>
           </div>
+          <p className="text-sm md:text-base text-white/60 max-w-3xl mb-16 leading-relaxed">
+            {t<string>("home.plansSubtext")}
+          </p>
           <div className="grid md:grid-cols-3 gap-6">
-            {plans.map((p) => (
-              <div
-                key={p.n}
-                className={`p-8 md:p-10 border ${p.h ? "bg-white text-black border-white" : "border-white/20"}`}
-              >
-                <h3 className="text-sm uppercase tracking-widest font-semibold opacity-70">{p.n}</h3>
-                <div className="mt-6 flex items-baseline gap-1">
-                  <span className="text-5xl md:text-6xl font-bold">{p.p}</span>
-                  <span className="text-sm opacity-60">{p.per}</span>
+            {plans.map((p, i) => {
+              const highlighted = i === 1;
+              return (
+                <div
+                  key={p.n}
+                  className={`p-8 md:p-10 border ${highlighted ? "bg-white text-black border-white" : "border-white/20"}`}
+                >
+                  <h3 className="text-sm uppercase tracking-widest font-semibold opacity-70">{p.n}</h3>
+                  <div className="mt-6">
+                    <span className="text-3xl md:text-4xl font-bold leading-tight">{p.p}</span>
+                  </div>
+                  <Link to="/contacto" className={`mt-8 inline-flex items-center gap-2 text-sm uppercase tracking-widest font-semibold border px-5 py-3 ${highlighted ? "border-black hover:bg-black hover:text-white" : "border-white hover:bg-white hover:text-black"}`}>
+                    {t<string>("home.planCta")} <ArrowRight size={14}/>
+                  </Link>
                 </div>
-                <Link to="/planes" className={`mt-8 inline-flex items-center gap-2 text-sm uppercase tracking-widest font-semibold border px-5 py-3 ${p.h ? "border-black hover:bg-black hover:text-white" : "border-white hover:bg-white hover:text-black"}`}>
-                  Más info <ArrowRight size={14}/>
-                </Link>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -186,7 +175,7 @@ export default function Home() {
       <section className="py-24 md:py-40 px-5 md:px-10 bg-white">
         <div className="mx-auto max-w-5xl text-center">
           <p className="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
-            "El marketing deportivo no es vender camisetas. <span className="italic font-light text-black/50">Es hacer que la gente quiera ponérselas."</span>
+            {t<string>("home.quote")}
           </p>
         </div>
       </section>
@@ -195,10 +184,10 @@ export default function Home() {
       <section className="bg-black text-white py-24 md:py-32 px-5 md:px-10">
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-5xl md:text-7xl font-bold uppercase tracking-tight leading-none">
-            ¿Listos para<br/><span className="italic font-light">hacerla visible?</span>
+            {t<string>("home.ctaTitle1")}<br/><span className="italic font-light">{t<string>("home.ctaTitle2")}</span>
           </h2>
           <Link to="/contacto" className="mt-12 inline-flex items-center gap-3 bg-white text-black px-8 py-5 text-sm uppercase tracking-widest font-semibold hover:bg-white/90">
-            Hablemos <ArrowRight size={16}/>
+            {t<string>("home.ctaBtn")} <ArrowRight size={16}/>
           </Link>
         </div>
       </section>
