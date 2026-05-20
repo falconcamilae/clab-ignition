@@ -78,7 +78,7 @@ export const translations = {
           d: "Web, SEO local, Google Business, captación de socios y jugadores. Que cuando alguien busque entrenar en su barrio, te encuentre primero.",
           items: [
             { t: "Web institucional", d: "Diseñamos webs claras, rápidas y pensadas para captar — la cara digital que tu club merece." },
-            { t: "SEO local Málaga", d: "Posicionamos tu club en las búsquedas de tu zona para que aparezcas antes que nadie cuando alguien busque dónde entrenar." },
+            { t: "SEO local", d: "Posicionamos tu club en las búsquedas de tu zona para que aparezcas antes que nadie cuando alguien busque dónde entrenar." },
             { t: "Google Business", d: "Configuramos y optimizamos tu ficha de Google para que tu club se encuentre fácil en mapas y búsquedas locales." },
             { t: "Captación de leads", d: "Diseñamos campañas y embudos para captar nuevos socios, jugadores y familias interesadas en tu proyecto." },
           ],
