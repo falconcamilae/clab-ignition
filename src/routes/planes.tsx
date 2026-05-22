@@ -8,7 +8,7 @@ export const Route = createFileRoute("/planes")({
   component: Planes,
   head: () => ({
     meta: [
-      { title: "Planes — In The Clab" },
+      { title: "Planes — In The CLAB" },
       { name: "description", content: "Planes de marketing deportivo a la medida de clubes, academias y centros deportivos." },
     ],
   }),
