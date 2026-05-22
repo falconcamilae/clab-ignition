@@ -10,7 +10,7 @@ export const Route = createFileRoute("/servicios")({
   component: Servicios,
   head: () => ({
     meta: [
-      { title: "Servicios — In The Clab" },
+      { title: "Servicios — In The CLAB" },
       { name: "description", content: "Branding, redes sociales, optimización digital y audiovisual para clubes y academias deportivas." },
     ],
   }),

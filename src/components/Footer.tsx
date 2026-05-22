@@ -9,7 +9,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
         <div className="grid md:grid-cols-3 gap-12">
           <div>
-            <img src="/media/logo-clab.png" alt="In The Clab" className="h-8 md:h-10 w-auto" />
+            <img src="/media/logo-clab.png" alt="In The CLAB" className="h-8 md:h-10 w-auto" />
             <p className="mt-6 text-sm text-white/60 max-w-xs leading-relaxed">
               {t<string>("footer.tagline")}
             </p>
@@ -46,7 +46,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-xs text-white/40 gap-2">
-          <span>© {new Date().getFullYear()} In The Clab. {t<string>("footer.rights")}</span>
+          <span>© {new Date().getFullYear()} In The CLAB. {t<string>("footer.rights")}</span>
           <a href="https://www.clabagency.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">[www.clabagency.com]</a>
         </div>
       </div>

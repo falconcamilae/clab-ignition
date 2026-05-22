@@ -56,8 +56,8 @@ export function Navbar() {
     <>
       <header className="fixed top-0 left-0 right-0 z-40 border-b border-white/10 bg-black">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-10">
-          <Link to="/" aria-label="In The Clab" className="flex items-center">
-            <img src="/media/logo-clab.png" alt="In The Clab" className="h-8 md:h-10 w-auto" />
+          <Link to="/" aria-label="In The CLAB" className="flex items-center">
+            <img src="/media/logo-clab.png" alt="In The CLAB" className="h-8 md:h-10 w-auto" />
           </Link>
           <nav className="hidden md:flex items-center gap-8">
             {links.map((l) => (
@@ -88,8 +88,8 @@ export function Navbar() {
       {open && (
         <div className="fixed inset-0 z-50 bg-black text-white flex flex-col">
           <div className="flex items-center justify-between px-5 py-4 md:px-10 border-b border-white/10">
-            <Link to="/" aria-label="In The Clab" className="flex items-center">
-              <img src="/media/logo-clab.png" alt="In The Clab" className="h-8 md:h-10 w-auto" />
+            <Link to="/" aria-label="In The CLAB" className="flex items-center">
+              <img src="/media/logo-clab.png" alt="In The CLAB" className="h-8 md:h-10 w-auto" />
             </Link>
             <button onClick={() => setOpen(false)} aria-label="Close menu">
               <X size={28} />

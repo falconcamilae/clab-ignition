@@ -8,7 +8,7 @@ export const Route = createFileRoute("/nosotros")({
   component: Nosotros,
   head: () => ({
     meta: [
-      { title: "Nosotros — In The Clab" },
+      { title: "Nosotros — In The CLAB" },
       { name: "description", content: "Agencia de marketing deportivo en Málaga. Equipo joven especializado exclusivamente en deporte." },
     ],
   }),
