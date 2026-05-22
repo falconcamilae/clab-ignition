@@ -108,17 +108,17 @@ export const translations = {
         {
           n: "Básico", p: "Desde 120€/mes + IVA", per: "",
           d: "Para clubes y academias que empiezan a tomarse en serio su presencia digital.",
-          items: ["12 publicaciones al mes", "Plantillas de marca", "Calendario editorial", "Soporte por email"],
+          items: ["8 publicaciones al mes", "Plantillas de marca", "Calendario editorial", "Soporte por email"],
         },
         {
           n: "Medio", p: "Desde 250€/mes + IVA", per: "",
           d: "El plan más popular. Contenido constante, cobertura y crecimiento real.",
-          items: ["20 publicaciones al mes", "2 sesiones de fotografía", "Cobertura de 2 partidos", "Reels y stories editados", "Reporting mensual", "Estrategia trimestral"],
+          items: ["Todo lo del Blan Básico", "+2 publicaciones extras", "Sesiones de fotografía", "Cobertura de partidos", "Reels y stories editados", "Reporting mensual", "Estrategia trimestral"],
         },
         {
           n: "Premium", p: "A medida", per: "",
           d: "Para clubes con ambición. Equipo dedicado, audiovisual avanzado y estrategia 360.",
-          items: ["Todo lo del plan Medio", "Mini-documentales", "Presentación de jugadores", "Branding y rediseño", "Web institucional", "Equipo dedicado"],
+          items: ["Todo lo del plan Medio", "Presentación de jugadores", "Branding y rediseño", "Web institucional", "Equipo dedicado"],
         },
       ],
     },
@@ -273,17 +273,17 @@ export const translations = {
         {
           n: "Basic", p: "From €120/mo + VAT", per: "",
           d: "For clubs and academies starting to take their digital presence seriously.",
-          items: ["12 posts per month", "Brand templates", "Editorial calendar", "Email support"],
+          items: ["8 posts per month", "Brand templates", "Editorial calendar", "Email support"],
         },
         {
           n: "Medium", p: "From €250/mo + VAT", per: "",
           d: "The most popular plan. Constant content, coverage and real growth.",
-          items: ["20 posts per month", "2 photo sessions", "Coverage of 2 matches", "Edited reels and stories", "Monthly reporting", "Quarterly strategy"],
+          items: ["Everything in Basic plan", "+2 extra posts", "Photo sessions", "Match coverage", "Edited reels and stories", "Monthly reporting", "Quarterly strategy"],
         },
         {
           n: "Premium", p: "Custom", per: "",
           d: "For clubs with ambition. Dedicated team, advanced audiovisual and 360 strategy.",
-          items: ["Everything in Medium", "Mini-documentaries", "Player presentations", "Branding and redesign", "Institutional website", "Dedicated team"],
+          items: ["Everything in Medium", "Player presentations", "Branding and redesign", "Institutional website", "Dedicated team"],
         },
       ],
     },
@@ -438,17 +438,17 @@ export const translations = {
         {
           n: "Base", p: "Da 120€/mese + IVA", per: "",
           d: "Per club e academy che iniziano a prendere sul serio la propria presenza digitale.",
-          items: ["12 pubblicazioni al mese", "Template di marca", "Calendario editoriale", "Supporto via email"],
+          items: ["8 pubblicazioni al mese", "Template di marca", "Calendario editoriale", "Supporto via email"],
         },
         {
           n: "Medio", p: "Da 250€/mese + IVA", per: "",
           d: "Il piano più popolare. Contenuti costanti, copertura e crescita reale.",
-          items: ["20 pubblicazioni al mese", "2 sessioni fotografiche", "Copertura di 2 partite", "Reels e stories montati", "Reporting mensile", "Strategia trimestrale"],
+          items: ["Tutto del piano Base", "+2 pubblicazioni extra", "Sessioni fotografiche", "Copertura di partite", "Reels e stories montati", "Reporting mensile", "Strategia trimestrale"],
         },
         {
           n: "Premium", p: "Su misura", per: "",
           d: "Per club con ambizione. Team dedicato, audiovisivo avanzato e strategia a 360.",
-          items: ["Tutto del piano Medio", "Mini-documentari", "Presentazione giocatori", "Branding e restyling", "Sito istituzionale", "Team dedicato"],
+          items: ["Tutto del piano Medio", "Presentazione giocatori", "Branding e restyling", "Sito istituzionale", "Team dedicato"],
         },
       ],
     },
