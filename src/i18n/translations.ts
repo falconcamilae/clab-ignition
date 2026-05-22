@@ -18,7 +18,7 @@ export const translations = {
       ctaPlan: "Quiero mi plan CLAB",
       ctaServices: "Ver servicios",
       manifestoLabel: "Lo que sentimos",
-      manifesto: 'En el deporte no se vende. Se contagia. Nosotros somos el altavoz de lo que ya late dentro del club.',
+      manifesto: 'El deporte no se vende. Se contagia. Nosotros somos el altavoz de lo que ya late dentro del club.',
       manifestoSoft: "Se contagia.",
       servicesLabel: "Qué hacemos",
       servicesTitle: "Servicios",
