@@ -118,7 +118,7 @@ export const translations = {
         {
           n: "Premium", p: "A medida", per: "",
           d: "Para clubes con ambición. Equipo dedicado, audiovisual avanzado y estrategia 360.",
-          items: ["Todo lo del Plan medio", "Presentación de jugadores", "Branding y rediseño", "Web institucional", "Equipo dedicato"],
+          items: ["Todo lo del Plan medio", "Presentación de jugadores", "Branding y rediseño", "Web institucional", "Equipo dedicado"],
         },
       ],
     },
