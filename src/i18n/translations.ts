@@ -113,12 +113,12 @@ export const translations = {
         {
           n: "Medio", p: "Desde 250€/mes + IVA", per: "",
           d: "El plan más popular. Contenido constante, cobertura y crecimiento real.",
-          items: ["Todo lo del Blan Básico", "+2 publicaciones extras", "Sesiones de fotografía", "Cobertura de partidos", "Reels y stories editados", "Reporting mensual", "Estrategia trimestral"],
+          items: ["Todo lo del Plan Básico", "+2 publicaciones extras", "Sesiones de fotografía", "Cobertura de partidos", "Reels y stories editados", "Reporting mensual", "Estrategia trimestral"],
         },
         {
           n: "Premium", p: "A medida", per: "",
           d: "Para clubes con ambición. Equipo dedicado, audiovisual avanzado y estrategia 360.",
-          items: ["Todo lo del plan Medio", "Presentación de jugadores", "Branding y rediseño", "Web institucional", "Equipo dedicado"],
+          items: ["Todo lo del Plan medio", "Presentación de jugadores", "Branding y rediseño", "Web institucional", "Equipo dedicado"],
         },
       ],
     },
