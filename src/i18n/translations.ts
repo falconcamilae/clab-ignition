@@ -99,8 +99,8 @@ export const translations = {
     },
     planes: {
       label: "Planes",
-      title1: "Sin humo.",
-      title2: "Solo deporte.",
+      title1: "No hacemos ruido.",
+      title2: "Generamos impacto.",
       lead: "Planes claros, sin permanencia. Empieza por donde quieras y escala cuando los resultados lo pidan.",
       recommended: "Recomendado",
       ctaBtn: "Empezar",
@@ -264,8 +264,8 @@ export const translations = {
     },
     planes: {
       label: "Plans",
-      title1: "No fluff.",
-      title2: "Just sport.",
+      title1: "We don't make noise.",
+      title2: "We generate impact.",
       lead: "Clear plans, no lock-in. Start wherever you want and scale when the results demand it.",
       recommended: "Recommended",
       ctaBtn: "Get started",
@@ -429,8 +429,8 @@ export const translations = {
     },
     planes: {
       label: "Piani",
-      title1: "Niente fumo.",
-      title2: "Solo sport.",
+      title1: "Non facciamo rumore.",
+      title2: "Generiamo impatto.",
       lead: "Piani chiari, senza vincoli. Inizia da dove vuoi e cresci quando i risultati lo chiedono.",
       recommended: "Consigliato",
       ctaBtn: "Iniziare",
