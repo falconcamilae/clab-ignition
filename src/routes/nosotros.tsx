@@ -24,19 +24,19 @@ export default function Nosotros() {
       <Navbar />
 
       <section className="pt-40 pb-24 md:pt-52 md:pb-32 px-5 md:px-10">
-        <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-16">
+        <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div>
             <img src="/media/bk-trainer.jpg" alt="Entrenador en el campo" className="w-full aspect-[4/5] object-cover grayscale" />
           </div>
-          <div className="flex flex-col justify-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-4">{t<string>("nosotros.sectionLabel")}</p>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+          <div className="flex flex-col justify-center max-w-md">
+            <p className="text-[11px] uppercase tracking-[0.3em] text-black/40 mb-3">{t<string>("nosotros.sectionLabel")}</p>
+            <h2 className="text-2xl md:text-3xl font-bold leading-tight">
               {t<string>("nosotros.heading1")}
               {t<string>("nosotros.heading2") ? (
                 <> <span className="italic font-light">{t<string>("nosotros.heading2")}</span></>
               ) : null}
             </h2>
-            <div className="mt-8 space-y-5 text-base md:text-lg text-black/70 leading-relaxed">
+            <div className="mt-5 space-y-3 text-sm md:text-[15px] text-black/70 leading-relaxed">
               {paragraphs.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
