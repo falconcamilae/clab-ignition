@@ -31,7 +31,10 @@ export default function Nosotros() {
           <div className="flex flex-col justify-center">
             <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-4">{t<string>("nosotros.sectionLabel")}</p>
             <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-              {t<string>("nosotros.heading1")} <span className="italic font-light">{t<string>("nosotros.heading2")}</span>
+              {t<string>("nosotros.heading1")}
+              {t<string>("nosotros.heading2") ? (
+                <> <span className="italic font-light">{t<string>("nosotros.heading2")}</span></>
+              ) : null}
             </h2>
             <div className="mt-8 space-y-5 text-base md:text-lg text-black/70 leading-relaxed">
               {paragraphs.map((p, i) => (
