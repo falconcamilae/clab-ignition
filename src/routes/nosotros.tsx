@@ -23,16 +23,7 @@ export default function Nosotros() {
     <div className="bg-white text-black">
       <Navbar />
 
-      <section className="pt-40 pb-20 md:pt-52 md:pb-28 px-5 md:px-10 border-b border-black/10">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-6">{t<string>("nosotros.label")}</p>
-          <h1 className="text-5xl md:text-8xl font-bold uppercase tracking-tight leading-[0.95]">
-            {t<string>("nosotros.title1")} <span className="italic font-light">{t<string>("nosotros.title2")}</span>
-          </h1>
-        </div>
-      </section>
-
-      <section className="py-24 md:py-32 px-5 md:px-10">
+      <section className="pt-40 pb-24 md:pt-52 md:pb-32 px-5 md:px-10">
         <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-16">
           <div>
             <img src="/media/bk-trainer.jpg" alt="Entrenador en el campo" className="w-full aspect-[4/5] object-cover grayscale" />
