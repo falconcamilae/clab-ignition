@@ -25,8 +25,8 @@ export default function Home() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-50 grayscale"
-          poster="/media/bk-trainer.jpg"
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover opacity-50 grayscale bg-black"
         >
           <source src="/media/bk.mp4" type="video/mp4" />
         </video>
