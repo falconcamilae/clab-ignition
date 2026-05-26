@@ -123,9 +123,6 @@ export const translations = {
       ],
     },
     nosotros: {
-      label: "Nosotros",
-      title1: "Una agencia",
-      title2: "con escudo.",
       sectionLabel: "Quiénes somos",
       heading1: "CLAB nace de algo que no se aprende:",
       heading2: "sentir los colores como propios.",
@@ -288,9 +285,6 @@ export const translations = {
       ],
     },
     nosotros: {
-      label: "About",
-      title1: "An agency",
-      title2: "with a crest.",
       sectionLabel: "Who we are",
       heading1: "CLAB is born from something you can't learn:",
       heading2: "feeling the colors as your own.",
@@ -453,9 +447,6 @@ export const translations = {
       ],
     },
     nosotros: {
-      label: "Chi siamo",
-      title1: "Un'agenzia",
-      title2: "con lo stemma.",
       sectionLabel: "Chi siamo",
       heading1: "CLAB nasce da qualcosa che non si impara:",
       heading2: "sentire i colori come propri.",
