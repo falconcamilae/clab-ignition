@@ -8,9 +8,13 @@ export const Route = createFileRoute("/nosotros")({
   component: Nosotros,
   head: () => ({
     meta: [
-      { title: "Nosotros — In The CLAB" },
-      { name: "description", content: "Agencia de marketing deportivo en Málaga. Equipo joven especializado exclusivamente en deporte." },
+      { title: "Nosotros — In The CLAB | Marketing Deportivo en Málaga" },
+      { name: "description", content: "Conoce a In The CLAB: agencia de marketing deportivo nacida en Málaga, especializada exclusivamente en deporte. Branding, estrategia y audiovisual." },
+      { property: "og:title", content: "Nosotros — In The CLAB" },
+      { property: "og:description", content: "Agencia de marketing deportivo nacida en Málaga, especializada exclusivamente en deporte." },
+      { property: "og:url", content: "https://clabagency.com/nosotros" },
     ],
+    links: [{ rel: "canonical", href: "https://clabagency.com/nosotros" }],
   }),
 });
 
