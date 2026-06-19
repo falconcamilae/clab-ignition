@@ -6,6 +6,18 @@ import { Footer } from "@/components/Footer";
 import { useI18n } from "@/i18n/I18nProvider";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "In The CLAB — Agencia de Marketing Deportivo en Málaga" },
+      { name: "description", content: "Agencia de marketing especializada exclusivamente en deporte. Branding, redes sociales y audiovisual para clubes, academias y centros deportivos en Málaga." },
+      { property: "og:title", content: "In The CLAB — Agencia de Marketing Deportivo en Málaga" },
+      { property: "og:description", content: "Agencia de marketing especializada exclusivamente en deporte. Branding, redes sociales y audiovisual para clubes y academias." },
+      { property: "og:url", content: "https://clabagency.com/" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xpJLsiJYLiVYLHBKQTsAA2rHzrM2/social-images/social-1779133989727-Screenshot_2026-05-18_215258.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xpJLsiJYLiVYLHBKQTsAA2rHzrM2/social-images/social-1779133989727-Screenshot_2026-05-18_215258.webp" },
+    ],
+    links: [{ rel: "canonical", href: "https://clabagency.com/" }],
+  }),
   component: Home,
 });
 
