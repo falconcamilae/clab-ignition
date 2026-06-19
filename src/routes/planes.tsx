@@ -8,9 +8,13 @@ export const Route = createFileRoute("/planes")({
   component: Planes,
   head: () => ({
     meta: [
-      { title: "Planes — In The CLAB" },
-      { name: "description", content: "Planes de marketing deportivo a la medida de clubes, academias y centros deportivos." },
+      { title: "Planes — In The CLAB | Marketing Deportivo para Clubes" },
+      { name: "description", content: "Planes de marketing deportivo a medida para clubes, academias y centros deportivos. Branding, redes sociales y audiovisual con In The CLAB." },
+      { property: "og:title", content: "Planes — In The CLAB" },
+      { property: "og:description", content: "Planes de marketing deportivo a medida de clubes, academias y centros deportivos." },
+      { property: "og:url", content: "https://clabagency.com/planes" },
     ],
+    links: [{ rel: "canonical", href: "https://clabagency.com/planes" }],
   }),
 });
 

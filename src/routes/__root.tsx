@@ -75,18 +75,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "In The CLAB — Agencia de Marketing Deportivo en Málaga" },
-      { name: "description", content: "CLAB es la agencia de marketing especializada exclusivamente en deporte. Branding, redes sociales y audiovisual para clubes, academias y centros deportivos." },
       { name: "author", content: "In The CLAB" },
-      { property: "og:title", content: "In The CLAB — Agencia de Marketing Deportivo en Málaga" },
-      { property: "og:description", content: "CLAB es la agencia de marketing especializada exclusivamente en deporte. Branding, redes sociales y audiovisual para clubes, academias y centros deportivos." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "In The CLAB — Agencia de Marketing Deportivo en Málaga" },
-      { name: "twitter:description", content: "CLAB es la agencia de marketing especializada exclusivamente en deporte. Branding, redes sociales y audiovisual para clubes, academias y centros deportivos." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xpJLsiJYLiVYLHBKQTsAA2rHzrM2/social-images/social-1779133989727-Screenshot_2026-05-18_215258.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xpJLsiJYLiVYLHBKQTsAA2rHzrM2/social-images/social-1779133989727-Screenshot_2026-05-18_215258.webp" },
+      { property: "og:site_name", content: "In The CLAB" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -97,6 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" },
     ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
@@ -105,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <HeadContent />
       </head>
