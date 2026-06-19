@@ -9,9 +9,13 @@ export const Route = createFileRoute("/contacto")({
   component: Contacto,
   head: () => ({
     meta: [
-      { title: "Contacto — In The CLAB" },
-      { name: "description", content: "Hablemos. Contacta con In The CLAB, agencia de marketing deportivo en Málaga." },
+      { title: "Contacto — In The CLAB | Agencia de Marketing Deportivo" },
+      { name: "description", content: "Hablemos. Contacta con In The CLAB, agencia de marketing deportivo en Málaga para clubes, academias y centros deportivos." },
+      { property: "og:title", content: "Contacto — In The CLAB" },
+      { property: "og:description", content: "Hablemos. Contacta con In The CLAB, agencia de marketing deportivo en Málaga." },
+      { property: "og:url", content: "https://clabagency.com/contacto" },
     ],
+    links: [{ rel: "canonical", href: "https://clabagency.com/contacto" }],
   }),
 });
 
