@@ -28,15 +28,19 @@ export function Navbar() {
       <button
         onClick={() => setLangOpen((v) => !v)}
         className={`flex items-center gap-2 ${mobile ? "text-base" : "text-xs"} uppercase tracking-widest font-medium text-white hover:opacity-60`}
-        aria-label="Language"
+        aria-label={t<string>("a11y.language")}
+        aria-haspopup="listbox"
+        aria-expanded={langOpen}
       >
-        <Globe size={mobile ? 18 : 14} /> {lang.toUpperCase()}
+        <Globe size={mobile ? 18 : 14} aria-hidden="true" /> {lang.toUpperCase()}
       </button>
       {langOpen && (
-        <div className="absolute right-0 mt-2 bg-white border border-black/10 min-w-[120px] z-50 shadow-lg">
+        <div role="listbox" className="absolute right-0 mt-2 bg-white border border-black/10 min-w-[120px] z-50 shadow-lg">
           {LANGS.map((l) => (
             <button
               key={l.code}
+              role="option"
+              aria-selected={lang === l.code}
               onClick={() => {
                 setLang(l.code as Lang);
                 setLangOpen(false);
@@ -44,7 +48,7 @@ export function Navbar() {
               className={`flex items-center gap-2 w-full text-left px-4 py-2 text-xs uppercase tracking-widest text-black hover:bg-black hover:text-white transition-colors ${lang === l.code ? "font-bold" : ""}`}
             >
               <span>{l.label}</span>
-              <span className="text-base leading-none">{l.flag}</span>
+              <span className="text-base leading-none" aria-hidden="true">{l.flag}</span>
             </button>
           ))}
         </div>
@@ -54,12 +58,20 @@ export function Navbar() {
 
   return (
     <>
+      {/* Skip link — visible only on focus, meets WCAG 2.4.1 */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:text-xs focus:uppercase focus:tracking-widest focus:font-semibold"
+      >
+        {t<string>("a11y.skipToContent")}
+      </a>
+
       <header className="fixed top-0 left-0 right-0 z-40 border-b border-white/10 bg-black">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-10">
           <Link to="/" aria-label="In The CLAB" className="flex items-center">
             <img src="/media/logo-clab.png" alt="In The CLAB" className="h-8 md:h-10 w-auto" />
           </Link>
-          <nav className="hidden md:flex items-center gap-8">
+          <nav aria-label="Primary" className="hidden md:flex items-center gap-8">
             {links.map((l) => (
               <Link
                 key={l.to}
@@ -77,25 +89,27 @@ export function Navbar() {
             <button
               className="text-white"
               onClick={() => setOpen(true)}
-              aria-label="Open menu"
+              aria-label={t<string>("a11y.openMenu")}
+              aria-expanded={open}
+              aria-controls="mobile-menu"
             >
-              <Menu size={26} />
+              <Menu size={26} aria-hidden="true" />
             </button>
           </div>
         </div>
       </header>
 
       {open && (
-        <div className="fixed inset-0 z-50 bg-black text-white flex flex-col">
+        <div id="mobile-menu" role="dialog" aria-modal="true" aria-label={t<string>("nav.inicio")} className="fixed inset-0 z-50 bg-black text-white flex flex-col">
           <div className="flex items-center justify-between px-5 py-4 md:px-10 border-b border-white/10">
             <Link to="/" aria-label="In The CLAB" className="flex items-center">
               <img src="/media/logo-clab.png" alt="In The CLAB" className="h-8 md:h-10 w-auto" />
             </Link>
-            <button onClick={() => setOpen(false)} aria-label="Close menu">
-              <X size={28} />
+            <button onClick={() => setOpen(false)} aria-label={t<string>("a11y.closeMenu")}>
+              <X size={28} aria-hidden="true" />
             </button>
           </div>
-          <nav className="flex flex-col items-center justify-center flex-1 gap-8">
+          <nav aria-label="Mobile" className="flex flex-col items-center justify-center flex-1 gap-8">
             {links.map((l) => (
               <Link
                 key={l.to}
@@ -112,9 +126,10 @@ export function Navbar() {
                   key={l.code}
                   onClick={() => setLang(l.code as Lang)}
                   className={`flex items-center gap-2 text-sm uppercase tracking-widest px-3 py-1 border ${lang === l.code ? "bg-white text-black border-white" : "border-white/40 hover:bg-white hover:text-black"}`}
+                  aria-pressed={lang === l.code}
                 >
                   <span>{l.label}</span>
-                  <span className="text-base leading-none">{l.flag}</span>
+                  <span className="text-base leading-none" aria-hidden="true">{l.flag}</span>
                 </button>
               ))}
             </div>

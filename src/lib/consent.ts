@@ -76,7 +76,51 @@ export function saveConsent(input: { analytics: boolean; marketing: boolean }): 
   try {
     window.dispatchEvent(new CustomEvent<ConsentState>(CHANGE_EVENT, { detail: state }));
   } catch {}
+  pushGcmUpdate(state);
   return state;
+}
+
+/**
+ * Google Consent Mode v2 stub. No cargamos GA/Meta todavía, pero dejamos las
+ * señales listas en `dataLayer` para que cualquier script futuro respete la
+ * decisión del usuario desde el primer render. Denegado por defecto.
+ */
+type Gcm = {
+  ad_storage: "granted" | "denied";
+  analytics_storage: "granted" | "denied";
+  ad_user_data: "granted" | "denied";
+  ad_personalization: "granted" | "denied";
+};
+
+function pushGcmUpdate(state: ConsentState): void {
+  if (typeof window === "undefined") return;
+  const dl = ((window as unknown as { dataLayer?: unknown[] }).dataLayer ??= []);
+  const consent: Gcm = {
+    ad_storage: state.marketing ? "granted" : "denied",
+    analytics_storage: state.analytics ? "granted" : "denied",
+    ad_user_data: state.marketing ? "granted" : "denied",
+    ad_personalization: state.marketing ? "granted" : "denied",
+  };
+  try {
+    dl.push({ event: "consent_update", consent });
+  } catch {}
+}
+
+/** Inicializa el estado por defecto en `dataLayer` (denied). Llamar una vez al arrancar la app. */
+export function initConsentDefaults(): void {
+  if (typeof window === "undefined") return;
+  const dl = ((window as unknown as { dataLayer?: unknown[] }).dataLayer ??= []);
+  const denied: Gcm = {
+    ad_storage: "denied",
+    analytics_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+  };
+  try {
+    dl.push({ event: "consent_default", consent: denied });
+  } catch {}
+  const current = getConsent();
+  if (current) pushGcmUpdate(current);
 }
 
 /** Reabre el banner de preferencias (usado desde Footer y desde /cookies). */

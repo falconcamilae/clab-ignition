@@ -1,7 +1,7 @@
+import { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
-  Link,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
@@ -9,27 +9,32 @@ import {
 } from "@tanstack/react-router";
 
 import { Toaster } from "@/components/ui/sonner";
-import { I18nProvider } from "@/i18n/I18nProvider";
+import { I18nProvider, useI18n } from "@/i18n/I18nProvider";
 import { CookieBanner } from "@/components/CookieBanner";
+import { initConsentDefaults } from "@/lib/consent";
 
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
+  const { t } = useI18n();
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+    <div className="flex min-h-dvh items-center justify-center bg-black text-white px-5">
+      <div className="max-w-lg text-center">
+        <p className="text-xs uppercase tracking-[0.3em] text-white/50">In The CLAB</p>
+        <h1 className="mt-6 text-7xl md:text-8xl font-bold tracking-tight">404</h1>
+        <h2 className="mt-4 text-2xl md:text-3xl font-bold uppercase tracking-tight">
+          {t<string>("errors.notFoundTitle")}
+        </h2>
+        <p className="mt-3 text-sm md:text-base text-white/70">
+          {t<string>("errors.notFoundBody")}
         </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        <div className="mt-8">
+          <a
+            href="/"
+            className="inline-flex items-center justify-center bg-white text-black px-8 py-4 text-xs uppercase tracking-widest font-semibold hover:bg-white/90 transition"
           >
-            Go home
-          </Link>
+            {t<string>("errors.notFoundBack")}
+          </a>
         </div>
       </div>
     </div>
@@ -39,31 +44,33 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
+  const { t } = useI18n();
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+    <div className="flex min-h-dvh items-center justify-center bg-black text-white px-5">
+      <div className="max-w-lg text-center">
+        <p className="text-xs uppercase tracking-[0.3em] text-white/50">In The CLAB</p>
+        <h1 className="mt-6 text-2xl md:text-3xl font-bold uppercase tracking-tight">
+          {t<string>("errors.genericTitle")}
         </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+        <p className="mt-3 text-sm md:text-base text-white/70">
+          {t<string>("errors.genericBody")}
         </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
           <button
             onClick={() => {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center bg-white text-black px-8 py-4 text-xs uppercase tracking-widest font-semibold hover:bg-white/90 transition"
           >
-            Try again
+            {t<string>("errors.retry")}
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex items-center justify-center border border-white text-white px-8 py-4 text-xs uppercase tracking-widest font-semibold hover:bg-white hover:text-black transition"
           >
-            Go home
+            {t<string>("errors.home")}
           </a>
         </div>
       </div>
@@ -93,8 +100,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
   shellComponent: RootShell,
   component: RootComponent,
-  notFoundComponent: NotFoundComponent,
-  errorComponent: ErrorComponent,
+  notFoundComponent: () => (
+    <I18nProvider>
+      <NotFoundComponent />
+    </I18nProvider>
+  ),
+  errorComponent: (props) => (
+    <I18nProvider>
+      <ErrorComponent {...props} />
+    </I18nProvider>
+  ),
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
@@ -113,6 +128,10 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+
+  useEffect(() => {
+    initConsentDefaults();
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
