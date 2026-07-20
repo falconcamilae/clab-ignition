@@ -13,6 +13,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServiciosRouteImport } from './routes/servicios'
 import { Route as PlanesRouteImport } from './routes/planes'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
+import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -36,6 +37,11 @@ const NosotrosRoute = NosotrosRouteImport.update({
   path: '/nosotros',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactoRoute = ContactoRouteImport.update({
   id: '/contacto',
   path: '/contacto',
@@ -50,6 +56,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
   '/nosotros': typeof NosotrosRoute
   '/planes': typeof PlanesRoute
   '/servicios': typeof ServiciosRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
   '/nosotros': typeof NosotrosRoute
   '/planes': typeof PlanesRoute
   '/servicios': typeof ServiciosRoute
@@ -67,6 +75,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
+  '/cookies': typeof CookiesRoute
   '/nosotros': typeof NosotrosRoute
   '/planes': typeof PlanesRoute
   '/servicios': typeof ServiciosRoute
@@ -77,6 +86,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/contacto'
+    | '/cookies'
     | '/nosotros'
     | '/planes'
     | '/servicios'
@@ -85,6 +95,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/contacto'
+    | '/cookies'
     | '/nosotros'
     | '/planes'
     | '/servicios'
@@ -93,6 +104,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/contacto'
+    | '/cookies'
     | '/nosotros'
     | '/planes'
     | '/servicios'
@@ -102,6 +114,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactoRoute: typeof ContactoRoute
+  CookiesRoute: typeof CookiesRoute
   NosotrosRoute: typeof NosotrosRoute
   PlanesRoute: typeof PlanesRoute
   ServiciosRoute: typeof ServiciosRoute
@@ -138,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NosotrosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contacto': {
       id: '/contacto'
       path: '/contacto'
@@ -158,6 +178,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactoRoute: ContactoRoute,
+  CookiesRoute: CookiesRoute,
   NosotrosRoute: NosotrosRoute,
   PlanesRoute: PlanesRoute,
   ServiciosRoute: ServiciosRoute,
