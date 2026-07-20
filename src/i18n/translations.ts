@@ -10,7 +10,7 @@ export const translations = {
   es: {
     nav: { inicio: "Inicio", servicios: "Servicios", planes: "Planes", nosotros: "Nosotros", contacto: "Contacto" },
     home: {
-      heroLabel: "Agencia boutique de marketing deportivo · Málaga",
+      heroLabel: "Agencia de marketing deportivo · Málaga",
       heroTitle1: "Solo deporte.",
       heroTitle2: "Solo criterio.",
       heroTitle3: "Marketing hecho",
@@ -128,7 +128,7 @@ export const translations = {
       heading1: "Somos CLAB.",
       heading2: "Marketing deportivo. Sin adaptaciones.",
       paragraphs: [
-        "Una agencia boutique de marketing deportivo nacida en Málaga, construida desde adentro del deporte.",
+        "Una agencia de marketing deportivo nacida en Málaga, construida desde adentro del deporte.",
         "Dos perfiles distintos, una misma convicción: una especialista en marketing y estrategia de marca, y un director técnico de fútbol con años en los banquillos. La combinación no fue casualidad — fue la respuesta a algo que los dos veían desde sus mundos: clubes con mucha historia y poca visibilidad.",
         "De esa unión nació CLAB. Estrategia, imagen, contenido y presencia digital pensados exclusivamente para clubes, academias y centros deportivos. No adaptamos lo que hacemos para el deporte: el deporte es lo único que hacemos.",
         "Trabajamos como parte del equipo, no como proveedores externos. Entrar en un club no es servir un contrato — es entender lo que representa para su gente y responder con criterio.",
@@ -243,7 +243,7 @@ export const translations = {
   en: {
     nav: { inicio: "Home", servicios: "Services", planes: "Plans", nosotros: "About", contacto: "Contact" },
     home: {
-      heroLabel: "Boutique sports marketing agency · Málaga",
+      heroLabel: "Sports marketing agency · Málaga",
       heroTitle1: "Sport only.",
       heroTitle2: "Judgement only.",
       heroTitle3: "Marketing built",
@@ -361,7 +361,7 @@ export const translations = {
       heading1: "We are CLAB.",
       heading2: "Sports marketing. No adaptations.",
       paragraphs: [
-        "A boutique sports marketing agency born in Málaga, built from inside sport.",
+        "A sports marketing agency born in Málaga, built from inside sport.",
         "Two different profiles, one same conviction: a marketing and brand strategy specialist, and a football technical director with years on the benches. The combination wasn't coincidence — it was the answer to something both saw from their worlds: clubs with lots of history and little visibility.",
         "From that union CLAB was born. Strategy, image, content and digital presence designed exclusively for clubs, academies and sports centers. We don't adapt what we do for sport: sport is the only thing we do.",
         "We work as part of the team, not as external suppliers. Stepping inside a club isn't fulfilling a contract — it's understanding what it means to its people, and answering with judgement.",
@@ -475,7 +475,7 @@ export const translations = {
   it: {
     nav: { inicio: "Home", servicios: "Servizi", planes: "Piani", nosotros: "Chi siamo", contacto: "Contatti" },
     home: {
-      heroLabel: "Agenzia boutique di marketing sportivo · Málaga",
+      heroLabel: "Agenzia di marketing sportivo · Málaga",
       heroTitle1: "Solo sport.",
       heroTitle2: "Solo criterio.",
       heroTitle3: "Marketing fatto",
@@ -593,7 +593,7 @@ export const translations = {
       heading1: "Siamo CLAB.",
       heading2: "Marketing sportivo. Senza adattamenti.",
       paragraphs: [
-        "Un'agenzia boutique di marketing sportivo nata a Málaga, costruita dall'interno dello sport.",
+        "Un'agenzia di marketing sportivo nata a Málaga, costruita dall'interno dello sport.",
         "Due profili diversi, una stessa convinzione: una specialista in marketing e strategia di marca, e un direttore tecnico di calcio con anni in panchina. La combinazione non è stata casualità — è stata la risposta a qualcosa che entrambi vedevano dai loro mondi: club con molta storia e poca visibilità.",
         "Da quell'unione è nato CLAB. Strategia, immagine, contenuto e presenza digitale pensati esclusivamente per club, academy e centri sportivi. Non adattiamo ciò che facciamo per lo sport: lo sport è l'unica cosa che facciamo.",
         "Lavoriamo come parte della squadra, non come fornitori esterni. Entrare in un club non è eseguire un contratto — è capire cosa rappresenta per la sua gente e rispondere con criterio.",
