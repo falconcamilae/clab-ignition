@@ -171,6 +171,7 @@ export const translations = {
       legal: "Legal",
       cookies: "Política de cookies",
       privacy: "Política de privacidad",
+      manageCookies: "Gestionar cookies",
     },
     cookieBanner: {
       title: "Tu experiencia, mejor con cookies",
@@ -384,6 +385,7 @@ export const translations = {
       legal: "Legal",
       cookies: "Cookie policy",
       privacy: "Privacy policy",
+      manageCookies: "Manage cookies",
     },
     cookieBanner: {
       title: "A better experience, with cookies",
@@ -596,6 +598,7 @@ export const translations = {
       legal: "Legale",
       cookies: "Cookie policy",
       privacy: "Privacy policy",
+      manageCookies: "Gestisci cookie",
     },
     cookieBanner: {
       title: "Un'esperienza migliore, con i cookie",
