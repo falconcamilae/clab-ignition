@@ -87,6 +87,15 @@ export default function Contacto() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="border border-white/15 p-6 md:p-10 bg-white/[0.02]">
+              {/* Honeypot anti-spam: campo oculto que los bots suelen rellenar.
+                  Formspree ignora envíos donde `_gotcha` viene con valor.
+                  Invisible para usuarios y para lectores de pantalla. */}
+              <div aria-hidden="true" style={{ position: "absolute", left: "-10000px", top: "auto", width: 1, height: 1, overflow: "hidden" }}>
+                <label>
+                  No rellenar
+                  <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" />
+                </label>
+              </div>
               <div className="grid gap-5">
                 <Field label={fields.nombre}>
                   <input required name="nombre" type="text" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
