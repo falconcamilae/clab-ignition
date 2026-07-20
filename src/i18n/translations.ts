@@ -595,7 +595,6 @@ export const translations = {
       nav: "Navigazione",
       contact: "Contatti",
       rights: "Tutti i diritti riservati.",
-      legale: "Legale",
       legal: "Legale",
       cookies: "Cookie policy",
       privacy: "Privacy policy",
