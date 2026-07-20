@@ -27,7 +27,7 @@ export default function Nosotros() {
     <div className="bg-white text-black">
       <Navbar />
 
-      <section className="pt-40 pb-24 md:pt-52 md:pb-32 px-5 md:px-10">
+      <section id="main-content" tabIndex={-1} className="pt-40 pb-24 md:pt-52 md:pb-32 px-5 md:px-10">
         <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div>
             <img src="/media/bk-trainer.jpg" alt="Entrenador en el campo" className="w-full aspect-[4/5] object-cover grayscale" />

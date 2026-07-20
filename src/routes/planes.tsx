@@ -28,7 +28,7 @@ export default function Planes() {
     <div className="bg-white text-black min-h-screen">
       <Navbar />
 
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 px-5 md:px-10">
+      <section id="main-content" tabIndex={-1} className="pt-32 pb-16 md:pt-40 md:pb-20 px-5 md:px-10">
         <div className="mx-auto max-w-7xl grid md:grid-cols-3 gap-6">
           {plans.map((p, i) => {
             const h = i === 1;
