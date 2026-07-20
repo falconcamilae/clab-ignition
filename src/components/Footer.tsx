@@ -45,9 +45,13 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-xs text-white/40 gap-2">
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between text-xs text-white/40 gap-3">
           <span>© {new Date().getFullYear()} In The CLAB. {t<string>("footer.rights")}</span>
-          <a href="https://www.clabagency.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">[www.clabagency.com]</a>
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            <Link to="/cookies" className="hover:opacity-80">{t<string>("footer.cookies")}</Link>
+            <Link to="/privacidad" className="hover:opacity-80">{t<string>("footer.privacy")}</Link>
+            <a href="https://www.clabagency.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">[www.clabagency.com]</a>
+          </div>
         </div>
       </div>
     </footer>
