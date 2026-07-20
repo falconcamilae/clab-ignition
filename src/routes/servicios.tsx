@@ -33,7 +33,7 @@ export default function Servicios() {
     <div className="bg-white text-black">
       <Navbar />
 
-      <section className="pt-40 pb-20 md:pt-52 md:pb-28 px-5 md:px-10 border-b border-black/10">
+      <section id="main-content" tabIndex={-1} className="pt-40 pb-20 md:pt-52 md:pb-28 px-5 md:px-10 border-b border-black/10">
         <div className="mx-auto max-w-7xl">
           <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-6">{t<string>("servicios.label")}</p>
           <h1 className="text-5xl md:text-8xl font-bold uppercase tracking-tight leading-[0.95]">

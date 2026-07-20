@@ -29,7 +29,7 @@ export default function Contacto() {
     <div className="bg-black text-white min-h-screen">
       <Navbar />
 
-      <section className="pt-40 pb-16 md:pt-52 md:pb-20 px-5 md:px-10 border-b border-white/10">
+      <section id="main-content" tabIndex={-1} className="pt-40 pb-16 md:pt-52 md:pb-20 px-5 md:px-10 border-b border-white/10">
         <div className="mx-auto max-w-7xl">
           <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-6">{t<string>("contacto.label")}</p>
           <h1 className="text-5xl md:text-8xl font-bold uppercase tracking-tight leading-[0.95]">
@@ -81,15 +81,18 @@ export default function Contacto() {
           </div>
 
           {state.succeeded ? (
-            <div className="border border-white/15 p-6 md:p-10 bg-white/[0.02] flex flex-col items-center justify-center text-center">
+            <div
+              role="status"
+              aria-live="polite"
+              className="border border-white/15 p-6 md:p-10 bg-white/[0.02] flex flex-col items-center justify-center text-center"
+            >
               <p className="text-3xl md:text-4xl font-bold uppercase tracking-tight mb-4">{t<string>("contacto.successTitle")}</p>
               <p className="text-lg text-white/70">{t<string>("contacto.successBody")}</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="border border-white/15 p-6 md:p-10 bg-white/[0.02]">
+            <form onSubmit={handleSubmit} noValidate className="border border-white/15 p-6 md:p-10 bg-white/[0.02]">
               {/* Honeypot anti-spam: campo oculto que los bots suelen rellenar.
-                  Formspree ignora envíos donde `_gotcha` viene con valor.
-                  Invisible para usuarios y para lectores de pantalla. */}
+                  Formspree ignora envíos donde `_gotcha` viene con valor. */}
               <div aria-hidden="true" style={{ position: "absolute", left: "-10000px", top: "auto", width: 1, height: 1, overflow: "hidden" }}>
                 <label>
                   No rellenar
@@ -97,38 +100,39 @@ export default function Contacto() {
                 </label>
               </div>
               <div className="grid gap-5">
-                <Field label={fields.nombre}>
-                  <input required name="nombre" type="text" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
+                <Field label={fields.nombre} htmlFor="c-nombre" required>
+                  <input id="c-nombre" required aria-required="true" autoComplete="name" name="nombre" type="text" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
                 </Field>
-                <Field label={fields.club}>
-                  <input required name="club" type="text" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
+                <Field label={fields.club} htmlFor="c-club" required>
+                  <input id="c-club" required aria-required="true" autoComplete="organization" name="club" type="text" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
                 </Field>
-                <Field label={fields.email}>
-                  <input required name="email" type="email" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
+                <Field label={fields.email} htmlFor="c-email" required>
+                  <input id="c-email" required aria-required="true" autoComplete="email" name="email" type="email" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
                 </Field>
-                <Field label={fields.telefono}>
-                  <input name="telefono" type="tel" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
+                <Field label={fields.telefono} htmlFor="c-tel">
+                  <input id="c-tel" autoComplete="tel" name="telefono" type="tel" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
                 </Field>
-                <Field label={fields.plan}>
-                  <select name="plan" className="bg-black border-b border-white/30 py-3 focus:outline-none focus:border-white">
+                <Field label={fields.plan} htmlFor="c-plan">
+                  <select id="c-plan" name="plan" className="bg-black border-b border-white/30 py-3 focus:outline-none focus:border-white">
                     {planOptions.map((p) => <option key={p}>{p}</option>)}
                   </select>
                 </Field>
-                <Field label={fields.mensaje}>
-                  <textarea required name="mensaje" rows={4} className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white resize-none" />
+                <Field label={fields.mensaje} htmlFor="c-msg" required>
+                  <textarea id="c-msg" required aria-required="true" name="mensaje" rows={4} className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white resize-none" />
                 </Field>
                 <button
                   type="submit"
                   disabled={state.submitting}
+                  aria-busy={state.submitting}
                   className="mt-4 inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-5 text-sm uppercase tracking-widest font-semibold hover:bg-white/90 disabled:opacity-60"
                 >
-                  {state.submitting ? t<string>("contacto.submitting") : <>{t<string>("contacto.submit")} <Send size={16}/></>}
+                  {state.submitting ? t<string>("contacto.submitting") : <>{t<string>("contacto.submit")} <Send size={16} aria-hidden="true"/></>}
                 </button>
-                {state.errors && (
-                  <div className="mt-2 text-sm text-red-400">
-                    <p>{t<string>("contacto.error")}</p>
-                  </div>
-                )}
+                <div role="alert" aria-live="assertive" className="min-h-[1.25rem]">
+                  {state.errors && (
+                    <p className="mt-2 text-sm text-red-400">{t<string>("contacto.error")}</p>
+                  )}
+                </div>
               </div>
             </form>
           )}
@@ -140,10 +144,12 @@ export default function Contacto() {
   );
 }
 
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
+function Field({ label, children, htmlFor, required }: { label: string; children: React.ReactNode; htmlFor?: string; required?: boolean }) {
   return (
-    <label className="flex flex-col gap-1">
-      <span className="text-[10px] uppercase tracking-[0.3em] text-white/50">{label}</span>
+    <label htmlFor={htmlFor} className="flex flex-col gap-1">
+      <span className="text-[10px] uppercase tracking-[0.3em] text-white/50">
+        {label}{required && <span aria-hidden="true"> *</span>}
+      </span>
       {children}
     </label>
   );

@@ -25,7 +25,7 @@ function PrivacidadPage() {
   return (
     <div className="bg-white text-black">
       <Navbar />
-      <section className="pt-40 pb-24 md:pt-52 md:pb-32 px-5 md:px-10">
+      <section id="main-content" tabIndex={-1} className="pt-40 pb-24 md:pt-52 md:pb-32 px-5 md:px-10">
         <div className="mx-auto max-w-3xl">
           <p className="text-xs uppercase tracking-widest text-black/50">{t<string>("privacy.updated")}</p>
           <h1 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight">{t<string>("privacy.title")}</h1>

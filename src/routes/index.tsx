@@ -31,7 +31,7 @@ export default function Home() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-end overflow-hidden bg-black text-white pt-24">
+      <section id="main-content" tabIndex={-1} className="relative min-h-screen flex items-end overflow-hidden bg-black text-white pt-24">
         <video
           autoPlay
           muted

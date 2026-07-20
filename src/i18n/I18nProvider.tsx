@@ -30,6 +30,14 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     } catch {}
   }, []);
 
+  // Sync <html lang> with the active language (SEO + a11y). Runs client-side only
+  // so it doesn't break SSR hydration (shell always renders lang="es").
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = lang;
+    }
+  }, [lang]);
+
   const setLang = useCallback((l: Lang) => {
     setLangState(l);
     try {
