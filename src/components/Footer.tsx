@@ -51,6 +51,13 @@ export function Footer() {
           <div className="flex flex-wrap gap-x-5 gap-y-2">
             <Link to="/cookies" className="hover:opacity-80">{t<string>("footer.cookies")}</Link>
             <Link to="/privacidad" className="hover:opacity-80">{t<string>("footer.privacy")}</Link>
+            <button
+              type="button"
+              onClick={() => openPreferences()}
+              className="hover:opacity-80 underline-offset-2 hover:underline text-left"
+            >
+              {t<string>("footer.manageCookies")}
+            </button>
             <a href="https://www.clabagency.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-80">[www.clabagency.com]</a>
           </div>
         </div>
