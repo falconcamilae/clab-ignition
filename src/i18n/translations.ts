@@ -216,7 +216,7 @@ export const translations = {
       ],
     },
   },
-  },
+
 
   en: {
     nav: { inicio: "Home", servicios: "Services", planes: "Plans", nosotros: "About", contacto: "Contact" },
