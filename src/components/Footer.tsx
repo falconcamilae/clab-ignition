@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Linkedin, Mail } from "lucide-react";
 import { useI18n } from "@/i18n/I18nProvider";
+import { openPreferences } from "@/lib/consent";
 
 export function Footer() {
   const { t } = useI18n();

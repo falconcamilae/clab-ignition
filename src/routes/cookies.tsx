@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { useI18n } from "@/i18n/I18nProvider";
+import { openPreferences } from "@/lib/consent";
 
 export const Route = createFileRoute("/cookies")({
   component: CookiesPage,
@@ -40,10 +41,8 @@ function CookiesPage() {
           </div>
           <div className="mt-16 pt-8 border-t border-black/10">
             <button
-              onClick={() => {
-                try { localStorage.removeItem("clab-cookie-consent"); } catch {}
-                if (typeof window !== "undefined") window.location.reload();
-              }}
+              type="button"
+              onClick={() => openPreferences()}
               className="text-sm px-5 py-3 rounded bg-black text-white hover:opacity-80"
             >
               {t<string>("cookieBanner.settings")}

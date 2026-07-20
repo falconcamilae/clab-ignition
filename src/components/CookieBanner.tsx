@@ -3,15 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import { Cookie, Sparkles, X } from "lucide-react";
 import { useI18n } from "@/i18n/I18nProvider";
-
-type Consent = {
-  necessary: true;
-  analytics: boolean;
-  marketing: boolean;
-  ts: number;
-};
-
-const KEY = "clab-cookie-consent";
+import { getConsent, saveConsent, subscribeOpen } from "@/lib/consent";
 
 export function CookieBanner() {
   const { t } = useI18n();
@@ -21,19 +13,22 @@ export function CookieBanner() {
   const [marketing, setMarketing] = useState(true);
 
   useEffect(() => {
-    try {
-      const stored = localStorage.getItem(KEY);
-      if (!stored) setOpen(true);
-    } catch {
+    // Primera visita o versión de política caducada → abrir automáticamente.
+    if (!getConsent()) setOpen(true);
+    // Reapertura manual desde Footer / página /cookies.
+    return subscribeOpen(() => {
+      const current = getConsent();
+      if (current) {
+        setAnalytics(current.analytics);
+        setMarketing(current.marketing);
+      }
+      setShowSettings(true);
       setOpen(true);
-    }
+    });
   }, []);
 
-  const save = (c: Omit<Consent, "ts" | "necessary">) => {
-    const consent: Consent = { necessary: true, ...c, ts: Date.now() };
-    try {
-      localStorage.setItem(KEY, JSON.stringify(consent));
-    } catch {}
+  const save = (c: { analytics: boolean; marketing: boolean }) => {
+    saveConsent(c);
     setOpen(false);
     setShowSettings(false);
   };
