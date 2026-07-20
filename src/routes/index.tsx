@@ -138,7 +138,7 @@ export default function Home() {
                   <source src={`/media/${src}`} type="video/mp4" />
                 </video>
                 <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/80 to-transparent">
-                  <span className="text-white text-xs uppercase tracking-widest">Proyecto · 0{i+1}</span>
+                  <span className="text-white text-xs uppercase tracking-widest">{t<string>("home.videoCaptionPrefix")} · 0{i+1}</span>
                 </div>
               </motion.div>
             ))}
