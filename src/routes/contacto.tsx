@@ -14,6 +14,8 @@ export const Route = createFileRoute("/contacto")({
       { property: "og:title", content: "Contacto — In The CLAB" },
       { property: "og:description", content: "Hablemos. Contacta con In The CLAB, agencia de marketing deportivo en Málaga." },
       { property: "og:url", content: "https://clabagency.com/contacto" },
+      { property: "og:image", content: "https://clabagency.com/media/og-image.jpg" },
+      { name: "twitter:image", content: "https://clabagency.com/media/og-image.jpg" },
     ],
     links: [{ rel: "canonical", href: "https://clabagency.com/contacto" }],
   }),

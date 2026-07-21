@@ -13,6 +13,8 @@ export const Route = createFileRoute("/planes")({
       { property: "og:title", content: "Planes — In The CLAB" },
       { property: "og:description", content: "Planes de marketing deportivo a medida de clubes, academias y centros deportivos." },
       { property: "og:url", content: "https://clabagency.com/planes" },
+      { property: "og:image", content: "https://clabagency.com/media/og-image.jpg" },
+      { name: "twitter:image", content: "https://clabagency.com/media/og-image.jpg" },
     ],
     links: [{ rel: "canonical", href: "https://clabagency.com/planes" }],
   }),
