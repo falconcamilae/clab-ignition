@@ -24,9 +24,9 @@ export const translations = {
       servicesTitle: "Especialización",
       viewAll: "Ver método completo",
       services: [
-        { t: "Branding", d: "Construimos identidades que se reconocen." },
-        { t: "Redes Sociales", d: "Presencia editorial constante. Estrategia, calendario y comunidad — para que el club exista fuera del partido." },
-        { t: "Optimización Digital", d: "Ser encontrado donde importa. Web, SEO local y captación pensados para socios, jugadores y familias reales." },
+        { t: "Branding", d: "Construimos identidades que se reconocen de forma profesional y original." },
+        { t: "Redes Sociales", d: "Presencia editorial. La necesaria, no invasiva. Estrategia, calendario y generación de comunidad para que el club y tu marca sean visibles fuera del juego." },
+        { t: "Optimización Digital", d: "Ser encontrado donde importa. Web, SEO local y orgánico. Sistema de captación personalizado para cada sector." },
         { t: "Audiovisual", d: "Fotografía y edición de vídeos que transmiten lo que se vive dentro de tu marca deportiva." },
       ],
       videoLabel: "Nuestra mirada",
