@@ -352,7 +352,7 @@ export const translations = {
         {
           n: "Premium", p: "Full involvement", per: "",
           d: "Outsourced marketing department. Dedicated team, 360 strategy and advanced audiovisual for clubs and projects with brand ambition.",
-          items: ["Everything in Medium", "Branding and redesign", "Institutional website", "Web analytics", "Dedicated team"],
+          items: ["Everything in Medium", "Branding and redesign", "Institutional website", "Web analytics", "Investment analysis", "External non-organic advertising channels", "Dedicated team"],
         },
       ],
     },
