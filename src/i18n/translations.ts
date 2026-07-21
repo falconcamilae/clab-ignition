@@ -544,7 +544,7 @@ export const translations = {
       quote: '"Creiamo marketing affinché chi indossa il tuo marchio lo indossi con orgoglio."',
       ctaTitle1: "Pronti a farvi",
       ctaTitle2: "vedere?",
-      ctaBtn: "Prenota un incontro",
+      ctaBtn: "Prenota una chiamata, senza impegno",
     },
     servicios: {
       label: "Metodo",
