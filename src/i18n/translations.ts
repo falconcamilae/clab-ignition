@@ -655,6 +655,7 @@ export const translations = {
       label: "Contatti",
       title1: "Vogliamo ascoltare",
       title2: "il vostro progetto.",
+      cta: "Prenota una chiamata, senza impegno",
       findUs: "Dove trovarci",
       location: "Posizione",
       locationVal: "Málaga, Spagna",
