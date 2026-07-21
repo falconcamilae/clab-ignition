@@ -20,7 +20,7 @@ export const Route = createFileRoute("/planes")({
   }),
 });
 
-type Plan = { n: string; p: string; per: string; d: string; items: string[] };
+type Plan = { n: string; p: string; per: string; d: string; items: string[]; phase?: string };
 
 export default function Planes() {
   const { t } = useI18n();
