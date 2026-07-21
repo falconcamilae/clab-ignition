@@ -162,6 +162,7 @@ export const translations = {
       label: "Contacto",
       title1: "Queremos escuchar",
       title2: "de vuestro proyecto.",
+      cta: "Agenda una llamada, sin compromiso",
       findUs: "Encuéntranos",
       location: "Ubicación",
       locationVal: "Málaga, España",
