@@ -35,7 +35,7 @@ export const translations = {
       videoCaptionPrefix: "Pieza",
       plansLabel: "Formas de trabajar",
       plansTitle: "Tres niveles de implicación",
-      plansSubtext: "Cada club está en un momento distinto. Estos tres niveles marcan la profundidad con la que entramos: desde acompañar la presencia mensual hasta integrarnos como equipo interno de marketing.",
+      plansSubtext: "Cada club, centro deportivo y marca están en un momento distinto. Estos tres niveles marcan la profundidad con la que entramos: desde acompañar la presencia desde afuera hasta integrarnos como equipo interno de marketing. Trabajamos CON vosotros.",
       viewDetail: "Ver método",
       plans: [
         { n: "Básico", p: "Punto de partida" },
@@ -44,8 +44,8 @@ export const translations = {
       ],
       planCta: "Ver este nivel",
       quote: '"Creamos marketing para que quienes llevan tu marca la lleven con orgullo."',
-      ctaTitle1: "¿Hablamos de",
-      ctaTitle2: "tu club?",
+      ctaTitle1: "¿Listos para",
+      ctaTitle2: "hacerte visible?",
       ctaBtn: "Reservar reunión",
     },
     servicios: {
