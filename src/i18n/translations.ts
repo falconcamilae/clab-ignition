@@ -119,7 +119,7 @@ export const translations = {
         {
           n: "Premium", p: "Máxima implicación", per: "",
           d: "Departamento de marketing externalizado. Equipo dedicado, estrategia 360 y audiovisual avanzado para clubes y proyectos con ambición de marca.",
-          items: ["Todo lo del Plan Medio", "Branding y rediseño", "Web institucional", "Analítica web", "Equipo dedicado"],
+          items: ["Todo lo del Plan Medio", "Branding y rediseño", "Web institucional", "Analítica web", "Análisis de inversión", "Canales de publicidad externa no orgánico", "Equipo dedicado"],
         },
       ],
     },
