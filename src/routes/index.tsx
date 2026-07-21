@@ -112,40 +112,39 @@ export default function Home() {
         </div>
       </section>
 
-      {/* VIDEO SHOWCASE */}
+      {/* WHY CLAB */}
       <section className="py-24 md:py-32 px-5 md:px-10">
         <div className="mx-auto max-w-7xl">
-          <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-4">{t<string>("home.videoLabel")}</p>
-          <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight mb-12 max-w-3xl">
-            {t<string>("home.videoTitle1")} <span className="italic font-light">{t<string>("home.videoTitle2")}</span>
-          </h2>
-          <div className="grid md:grid-cols-3 gap-px bg-black">
-            {["bro.mp4", "psg.mp4", "brost.mp4"].map((src, i) => (
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-black/40 mb-4">{t<string>("home.whyLabel")}</p>
+              <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight max-w-3xl">
+                {t<string>("home.whyTitle")}
+              </h2>
+            </div>
+            <Link to="/nosotros" className="inline-flex items-center gap-2 text-sm uppercase tracking-widest hover:opacity-60">
+              {t<string>("home.whyCta")} <ArrowUpRight size={16}/>
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-px bg-black/10">
+            {t<{ t: string; d: string }[]>("home.whyItems").map((s, i) => (
               <motion.div
-                key={src}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
+                key={s.t}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: i * 0.15 }}
-                className="relative aspect-[3/4] overflow-hidden bg-black group"
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                className="bg-white p-8 md:p-10 hover:bg-black hover:text-white transition-colors duration-500"
               >
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover group-hover:grayscale transition-all duration-700"
-                >
-                  <source src={`/media/${src}`} type="video/mp4" />
-                </video>
-                <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/80 to-transparent">
-                  <span className="text-white text-xs uppercase tracking-widest">{t<string>("home.videoCaptionPrefix")} · 0{i+1}</span>
-                </div>
+                <span className="text-xs font-mono opacity-50">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="mt-6 text-2xl md:text-3xl font-bold uppercase">{s.t}</h3>
+                <p className="mt-4 text-sm leading-relaxed opacity-70">{s.d}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* PLANS */}
       <section className="bg-black text-white py-24 md:py-32 px-5 md:px-10">
