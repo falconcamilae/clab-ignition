@@ -335,22 +335,22 @@ export const translations = {
       label: "Plans",
       title1: "Not a price list.",
       title2: "A way of working.",
-      lead: "Three levels according to how far we go inside the club. Start with one and grow when the project asks for it. No lock-in.",
+      lead: "Every plan is tailored and designed to grow with you. Three levels according to how far we go inside the club — start with one and grow when the project asks for it. No lock-in.",
       recommended: "Recommended",
       ctaBtn: "Book a meeting",
       list: [
         {
-          n: "Basic", p: "From €120/mo + VAT", per: "",
+          n: "Basic", p: "Starting point", per: "",
           d: "Steady monthly support. For clubs that want to start building presence with order and judgement.",
           items: ["8 posts per month", "Brand templates", "Editorial calendar", "Email support"],
         },
         {
-          n: "Medium", p: "From €250/mo + VAT", per: "",
+          n: "Medium", p: "Sustained growth", per: "",
           d: "Full editorial presence. Content, coverage and quarterly strategy — the level where real growth shows.",
           items: ["Everything in Basic plan", "+2 extra posts", "Photo sessions", "Match coverage", "Edited reels and stories", "Monthly reporting", "Quarterly strategy"],
         },
         {
-          n: "Premium", p: "Custom", per: "",
+          n: "Premium", p: "Full involvement", per: "",
           d: "Outsourced marketing department. Dedicated team, 360 strategy and advanced audiovisual for clubs with brand ambition.",
           items: ["Everything in Medium", "Player presentations", "Branding and redesign", "Institutional website", "Dedicated team"],
         },
