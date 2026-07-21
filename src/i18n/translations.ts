@@ -362,19 +362,19 @@ export const translations = {
       ctaBtn: "Book a meeting",
       list: [
         {
-          n: "Basic", p: "Starting point", per: "",
+          n: "Basic", p: "Starting point", per: "", phase: "Phases 1-2: Listening and Identity, sustained month to month.",
           d: "Monthly support. For those who want to start building presence with order and judgement.",
           items: ["One post per week of the month", "Brand templates", "Editorial calendar", "Email support", "Monthly analysis at month end"],
         },
         {
-          n: "Medium", p: "Sustained growth", per: "",
+          n: "Medium", p: "Sustained growth", per: "", phase: "Full Phases 1-4: Voice and Content enter with greater depth.",
           d: "Full editorial presence. Content, editing, fortnightly support and quarterly strategy — the level where real growth shows.",
           items: ["Everything in Basic plan", "+2 extra posts", "Photo sessions", "Coverage of sports sessions", "Edited reels and stories", "Monthly reporting", "Quarterly strategy"],
         },
         {
-          n: "Premium", p: "Full involvement", per: "",
+          n: "Premium", p: "Full involvement", per: "", phase: "Phases 1-4 at maximum level, plus Phase 5 when the club already has the base to sustain it.",
           d: "Outsourced marketing department. Dedicated team, 360 strategy and advanced audiovisual for clubs and projects with brand ambition.",
-          items: ["Everything in Medium", "Branding and redesign", "Institutional website", "Web analytics", "Investment analysis", "External non-organic advertising channels", "Dedicated team"],
+          items: ["Everything in Medium", "Branding and redesign", "Institutional website", "Web analytics", "Investment analysis", "External advertising channels — activated only if the previous phases already sustain the message.", "Dedicated team"],
         },
       ],
     },
