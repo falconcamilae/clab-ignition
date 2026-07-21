@@ -489,9 +489,9 @@ export const translations = {
       servicesTitle: "Specializzazione",
       viewAll: "Vedi metodo completo",
       services: [
-        { t: "Branding", d: "Costruiamo identità che si riconoscono." },
-        { t: "Social Media", d: "Presenza editoriale costante. Strategia, calendario e community — perché il club esista oltre il giorno della partita." },
-        { t: "Ottimizzazione Digitale", d: "Essere trovati dove conta. Web, SEO locale e acquisizione pensati per soci, giocatori e famiglie reali." },
+        { t: "Branding", d: "Costruiamo identità che si riconoscono — professionali e originali." },
+        { t: "Social Media", d: "Presenza editoriale. Quella necessaria, non invasiva. Strategia, calendario e costruzione di community perché il tuo club e il tuo marchio siano visibili anche fuori dal gioco." },
+        { t: "Ottimizzazione Digitale", d: "Essere trovati dove conta. Web, SEO locale e organico. Un sistema di acquisizione personalizzato per ogni settore." },
         { t: "Audiovisivo", d: "Fotografia e montaggio video che trasmettono ciò che si vive dentro il tuo marchio sportivo." },
       ],
       videoLabel: "Il nostro sguardo",
@@ -500,7 +500,7 @@ export const translations = {
       videoCaptionPrefix: "Pezzo",
       plansLabel: "Modi di lavorare",
       plansTitle: "Tre livelli di coinvolgimento",
-      plansSubtext: "Ogni club è in un momento diverso. Questi tre livelli definiscono la profondità con cui entriamo: dall'accompagnare la presenza mensile all'integrarci come team di marketing interno.",
+      plansSubtext: "Ogni club, centro sportivo e marchio è in un momento diverso. Questi tre livelli definiscono la profondità con cui entriamo: dall'accompagnare la presenza dall'esterno all'integrarci come team di marketing interno. Lavoriamo CON voi.",
       viewDetail: "Vedi il metodo",
       plans: [
         { n: "Base", p: "Punto di partenza" },
@@ -509,8 +509,8 @@ export const translations = {
       ],
       planCta: "Vedi questo livello",
       quote: '"Creiamo marketing affinché chi indossa il tuo marchio lo indossi con orgoglio."',
-      ctaTitle1: "Parliamo del",
-      ctaTitle2: "tuo club?",
+      ctaTitle1: "Pronti a farvi",
+      ctaTitle2: "vedere?",
       ctaBtn: "Prenota un incontro",
     },
     servicios: {
