@@ -21,7 +21,7 @@ export const Route = createFileRoute("/contacto")({
 
 export default function Contacto() {
   const { t } = useI18n();
-  const [state, handleSubmit] = useForm("mlgvddrz");
+  const [state, handleSubmit] = useForm((import.meta.env.VITE_FORMSPREE_ID as string) || "mlgvddrz");
   const fields = t<Record<string, string>>("contacto.fields");
   const planOptions = t<string[]>("contacto.planOptions");
 
@@ -101,24 +101,24 @@ export default function Contacto() {
               </div>
               <div className="grid gap-5">
                 <Field label={fields.nombre} htmlFor="c-nombre" required>
-                  <input id="c-nombre" required aria-required="true" autoComplete="name" name="nombre" type="text" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
+                  <input id="c-nombre" required aria-required="true" autoComplete="name" name="nombre" type="text" className="bg-transparent border-b border-white/30 py-3 font-semibold text-white focus:outline-none focus:border-white" />
                 </Field>
                 <Field label={fields.club} htmlFor="c-club" required>
-                  <input id="c-club" required aria-required="true" autoComplete="organization" name="club" type="text" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
+                  <input id="c-club" required aria-required="true" autoComplete="organization" name="club" type="text" className="bg-transparent border-b border-white/30 py-3 font-semibold text-white focus:outline-none focus:border-white" />
                 </Field>
                 <Field label={fields.email} htmlFor="c-email" required>
-                  <input id="c-email" required aria-required="true" autoComplete="email" name="email" type="email" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
+                  <input id="c-email" required aria-required="true" autoComplete="email" name="email" type="email" className="bg-transparent border-b border-white/30 py-3 font-semibold text-white focus:outline-none focus:border-white" />
                 </Field>
                 <Field label={fields.telefono} htmlFor="c-tel">
-                  <input id="c-tel" autoComplete="tel" name="telefono" type="tel" className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white" />
+                  <input id="c-tel" autoComplete="tel" name="telefono" type="tel" className="bg-transparent border-b border-white/30 py-3 font-semibold text-white focus:outline-none focus:border-white" />
                 </Field>
                 <Field label={fields.plan} htmlFor="c-plan">
-                  <select id="c-plan" name="plan" className="bg-black border-b border-white/30 py-3 focus:outline-none focus:border-white">
+                  <select id="c-plan" name="plan" className="bg-black border-b border-white/30 py-3 font-semibold text-white focus:outline-none focus:border-white">
                     {planOptions.map((p) => <option key={p}>{p}</option>)}
                   </select>
                 </Field>
                 <Field label={fields.mensaje} htmlFor="c-msg" required>
-                  <textarea id="c-msg" required aria-required="true" name="mensaje" rows={4} className="bg-transparent border-b border-white/30 py-3 focus:outline-none focus:border-white resize-none" />
+                  <textarea id="c-msg" required aria-required="true" name="mensaje" rows={4} className="bg-transparent border-b border-white/30 py-3 font-semibold text-white focus:outline-none focus:border-white resize-none" />
                 </Field>
                 <button
                   type="submit"
@@ -147,7 +147,7 @@ export default function Contacto() {
 function Field({ label, children, htmlFor, required }: { label: string; children: React.ReactNode; htmlFor?: string; required?: boolean }) {
   return (
     <label htmlFor={htmlFor} className="flex flex-col gap-1">
-      <span className="text-[10px] uppercase tracking-[0.3em] text-white/50">
+      <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-white/70">
         {label}{required && <span aria-hidden="true"> *</span>}
       </span>
       {children}

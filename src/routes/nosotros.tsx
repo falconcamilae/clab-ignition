@@ -55,6 +55,29 @@ export default function Nosotros() {
           <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight mb-16">
             {t<string>("nosotros.valuesTitle")}
           </h2>
+
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 mb-20 md:mb-24 max-w-5xl">
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-white mb-4">
+                {t<string>("nosotros.misionLabel")}
+              </h3>
+              <p className="text-sm md:text-base text-white/70 leading-relaxed">
+                {t<string>("nosotros.mision")}
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-white mb-4">
+                {t<string>("nosotros.visionLabel")}
+              </h3>
+              <p className="text-sm md:text-base text-white/70 leading-relaxed">
+                {t<string>("nosotros.vision")}
+              </p>
+            </div>
+          </div>
+
+          <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-tight text-white mb-8">
+            {t<string>("nosotros.valoresLabel")}
+          </h3>
           <div className="grid md:grid-cols-4 gap-px bg-white/10">
             {values.map((v) => (
               <div key={v[0]} className="bg-black p-8 md:p-10 hover:bg-white hover:text-black transition-colors duration-500">

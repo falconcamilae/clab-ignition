@@ -8,7 +8,7 @@ export const LANGS: { code: Lang; label: string; flag: string }[] = [
 
 export const translations = {
   es: {
-    nav: { inicio: "Inicio", servicios: "Servicios", planes: "Planes", nosotros: "Nosotros", contacto: "Contacto" },
+    nav: { inicio: "Inicio", servicios: "Servicios", planes: "Planes", nosotros: "Meta", contacto: "Contacto" },
     home: {
       heroLabel: "Marketing Deportivo · Málaga",
       heroTitle1: "Deporte.",
@@ -134,8 +134,13 @@ export const translations = {
         "Trabajamos como parte del equipo, no como proveedores externos. Entrar en un club no es servir un contrato — es entender lo que representa para su gente y responder con criterio.",
         "La pasión ya está en tu club. Nosotros la hacemos visible.",
       ],
-      valuesLabel: "Nuestra misión",
+      valuesLabel: "Nuestra metodología",
       valuesTitle: "La diferencia no está en hacer más, sino en decidir mejor.",
+      misionLabel: "MISIÓN",
+      mision: "Respetar la identidad de cada club, centro deportivo, institución o marca antes de comunicarla. Escuchar su historia, su gente y sus valores, y convertirlo en marca, voz y contenido que la afición reconoce como propio.",
+      visionLabel: "VISIÓN",
+      vision: "Ser la agencia a la que una institución o marca deportiva acude cuando quiere que su comunicación sea visible. No somos quienes hacemos todo, somos quienes entienden el partido, sesión o experiencia antes de comunicar.",
+      valoresLabel: "VALORES",
       values: [
         ["Foco", "Solo deporte. Es lo único que trabajamos."],
         ["Criterio", "Cada decisión tiene un porqué. Nada se improvisa."],
@@ -242,7 +247,7 @@ export const translations = {
 
 
   en: {
-    nav: { inicio: "Home", servicios: "Services", planes: "Plans", nosotros: "About", contacto: "Contact" },
+    nav: { inicio: "Home", servicios: "Services", planes: "Plans", nosotros: "Meta", contacto: "Contact" },
     home: {
       heroLabel: "Sports Marketing · Málaga",
       heroTitle1: "Sport.",
@@ -368,8 +373,13 @@ export const translations = {
         "We work as part of the team, not as external suppliers. Stepping inside a club isn't fulfilling a contract — it's understanding what it means to its people, and answering with judgement.",
         "The passion is already in your club. We make it visible.",
       ],
-      valuesLabel: "Our mission",
+      valuesLabel: "Our methodology",
       valuesTitle: "The difference isn't doing more, but deciding better.",
+      misionLabel: "MISSION",
+      mision: "Respect the identity of every club, sports centre, institution or brand before communicating it. Listen to their story, their people and their values, and turn that into brand, voice and content the fans recognise as their own.",
+      visionLabel: "VISION",
+      vision: "To be the agency a sports institution or brand turns to when they want their communication to be visible. We are not the ones who do everything — we are the ones who understand the match, the session or the experience before communicating it.",
+      valoresLabel: "VALUES",
       values: [
         ["Focus", "Sport only. It's the only thing we work on."],
         ["Judgement", "Every decision has a reason. Nothing is improvised."],
@@ -475,7 +485,7 @@ export const translations = {
   },
 
   it: {
-    nav: { inicio: "Home", servicios: "Servizi", planes: "Piani", nosotros: "Chi siamo", contacto: "Contatti" },
+    nav: { inicio: "Home", servicios: "Servizi", planes: "Piani", nosotros: "Meta", contacto: "Contatti" },
     home: {
       heroLabel: "Marketing Sportivo · Málaga",
       heroTitle1: "Sport.",
@@ -601,8 +611,13 @@ export const translations = {
         "Lavoriamo come parte della squadra, non come fornitori esterni. Entrare in un club non è eseguire un contratto — è capire cosa rappresenta per la sua gente e rispondere con criterio.",
         "La passione c'è già nel tuo club. Noi la rendiamo visibile.",
       ],
-      valuesLabel: "La nostra missione",
+      valuesLabel: "La nostra metodologia",
       valuesTitle: "La differenza non sta nel fare di più, ma nel decidere meglio.",
+      misionLabel: "MISSIONE",
+      mision: "Rispettare l'identità di ogni club, centro sportivo, istituzione o marca prima di comunicarla. Ascoltare la sua storia, la sua gente e i suoi valori, e trasformarli in marca, voce e contenuto che i tifosi riconoscono come propri.",
+      visionLabel: "VISIONE",
+      vision: "Essere l'agenzia a cui un'istituzione o una marca sportiva si rivolge quando vuole che la propria comunicazione sia visibile. Non siamo quelli che fanno tutto, siamo quelli che capiscono la partita, la sessione o l'esperienza prima di comunicarla.",
+      valoresLabel: "VALORI",
       values: [
         ["Focus", "Solo sport. È l'unica cosa che lavoriamo."],
         ["Criterio", "Ogni decisione ha un perché. Nulla si improvvisa."],

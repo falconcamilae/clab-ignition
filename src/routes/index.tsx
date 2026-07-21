@@ -38,6 +38,7 @@ export default function Home() {
           loop
           playsInline
           preload="auto"
+          poster="/media/bk-trainer.jpg"
           className="absolute inset-0 w-full h-full object-cover opacity-50 grayscale bg-black"
         >
           <source src="/media/bk.mp4" type="video/mp4" />
