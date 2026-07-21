@@ -26,6 +26,7 @@ export default function Contacto() {
   const [state, handleSubmit] = useForm((import.meta.env.VITE_FORMSPREE_ID as string) || "mlgvddrz");
   const fields = t<Record<string, string>>("contacto.fields");
   const planOptions = t<string[]>("contacto.planOptions");
+  const contactoOptions = t<string[]>("contacto.contactoOptions");
 
   return (
     <div className="bg-black text-white min-h-screen">
