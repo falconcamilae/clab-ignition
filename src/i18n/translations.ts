@@ -489,10 +489,10 @@ export const translations = {
       servicesTitle: "Specializzazione",
       viewAll: "Vedi metodo completo",
       services: [
-        { t: "Branding", d: "Identità che dura decenni. Stemma, tipografia e sistema visivo pensati come patrimonio del club, non come campagna." },
+        { t: "Branding", d: "Costruiamo identità che si riconoscono." },
         { t: "Social Media", d: "Presenza editoriale costante. Strategia, calendario e community — perché il club esista oltre il giorno della partita." },
         { t: "Ottimizzazione Digitale", d: "Essere trovati dove conta. Web, SEO locale e acquisizione pensati per soci, giocatori e famiglie reali." },
-        { t: "Audiovisivo", d: "Lo sguardo del club, raccontato da dentro. Video e foto che mostrano ciò che la gradinata non vede." },
+        { t: "Audiovisivo", d: "Fotografia e montaggio video che trasmettono ciò che si vive dentro il tuo marchio sportivo." },
       ],
       videoLabel: "Il nostro sguardo",
       videoTitle1: "Come guardiamo",
