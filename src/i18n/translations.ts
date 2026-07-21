@@ -573,18 +573,18 @@ export const translations = {
       list: [
         {
           n: "Base", p: "Punto di partenza", per: "",
-          d: "Accompagnamento mensile costante. Per club che vogliono iniziare a costruire presenza con ordine e criterio.",
-          items: ["8 pubblicazioni al mese", "Template di marca", "Calendario editoriale", "Supporto via email"],
+          d: "Accompagnamento mensile. Per chi vuole iniziare a costruire presenza con ordine e criterio.",
+          items: ["Una pubblicazione per ogni settimana del mese", "Template di marca", "Calendario editoriale", "Supporto via email", "Analisi mensile a fine mese"],
         },
         {
           n: "Medio", p: "Crescita costante", per: "",
-          d: "Presenza editoriale completa. Contenuti, copertura e strategia trimestrale — il livello in cui la crescita si vede davvero.",
-          items: ["Tutto del piano Base", "+2 pubblicazioni extra", "Sessioni fotografiche", "Copertura di partite", "Reels e stories montati", "Reporting mensile", "Strategia trimestrale"],
+          d: "Presenza editoriale completa. Contenuti, montaggio, accompagnamento ogni 15 giorni e strategia trimestrale — il livello in cui la crescita si vede davvero.",
+          items: ["Tutto del piano Base", "+2 pubblicazioni extra", "Sessioni fotografiche", "Copertura di sessioni sportive", "Reels e stories montati", "Reporting mensile", "Strategia trimestrale"],
         },
         {
           n: "Premium", p: "Massimo coinvolgimento", per: "",
-          d: "Dipartimento di marketing esternalizzato. Team dedicato, strategia 360 e audiovisivo avanzato per club con ambizione di marca.",
-          items: ["Tutto del piano Medio", "Presentazione giocatori", "Branding e restyling", "Sito istituzionale", "Team dedicato"],
+          d: "Dipartimento di marketing esternalizzato. Team dedicato, strategia 360 e audiovisivo avanzato per club e progetti con ambizione di marca.",
+          items: ["Tutto del piano Medio", "Branding e restyling", "Sito istituzionale", "Analitica web", "Team dedicato"],
         },
       ],
     },
