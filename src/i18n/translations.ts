@@ -8,7 +8,7 @@ export const LANGS: { code: Lang; label: string; flag: string }[] = [
 
 export const translations = {
   es: {
-    nav: { inicio: "Inicio", servicios: "Servicios", planes: "Planes", nosotros: "Meta", contacto: "Contacto" },
+    nav: { inicio: "Inicio", servicios: "Servicios", planes: "Planes", nosotros: "Nosotros", contacto: "Contacto" },
     home: {
       heroLabel: "Marketing Deportivo · Málaga",
       heroTitle1: "Deporte.",
@@ -247,7 +247,7 @@ export const translations = {
 
 
   en: {
-    nav: { inicio: "Home", servicios: "Services", planes: "Plans", nosotros: "Meta", contacto: "Contact" },
+    nav: { inicio: "Home", servicios: "Services", planes: "Plans", nosotros: "About", contacto: "Contact" },
     home: {
       heroLabel: "Sports Marketing · Málaga",
       heroTitle1: "Sport.",
@@ -485,7 +485,7 @@ export const translations = {
   },
 
   it: {
-    nav: { inicio: "Home", servicios: "Servizi", planes: "Piani", nosotros: "Meta", contacto: "Contatti" },
+    nav: { inicio: "Home", servicios: "Servizi", planes: "Piani", nosotros: "Chi siamo", contacto: "Contatti" },
     home: {
       heroLabel: "Marketing Sportivo · Málaga",
       heroTitle1: "Sport.",
