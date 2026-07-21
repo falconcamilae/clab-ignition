@@ -409,6 +409,7 @@ export const translations = {
       label: "Contact",
       title1: "We want to hear",
       title2: "about your project.",
+      cta: "Book a call, no commitment",
       findUs: "Find us",
       location: "Location",
       locationVal: "Málaga, Spain",
