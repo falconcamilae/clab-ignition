@@ -567,22 +567,22 @@ export const translations = {
       label: "Piani",
       title1: "Non è un listino.",
       title2: "È un modo di lavorare.",
-      lead: "Tre livelli in base a quanto entriamo nel club. Puoi iniziare da uno e crescere quando il progetto lo chiede. Senza vincoli.",
+      lead: "Tutti i piani sono su misura e pensati per crescere con te. Tre livelli in base a quanto entriamo nel club — puoi iniziare da uno e crescere quando il progetto lo chiede. Senza vincoli.",
       recommended: "Consigliato",
       ctaBtn: "Prenota un incontro",
       list: [
         {
-          n: "Base", p: "Da 120€/mese + IVA", per: "",
+          n: "Base", p: "Punto di partenza", per: "",
           d: "Accompagnamento mensile costante. Per club che vogliono iniziare a costruire presenza con ordine e criterio.",
           items: ["8 pubblicazioni al mese", "Template di marca", "Calendario editoriale", "Supporto via email"],
         },
         {
-          n: "Medio", p: "Da 250€/mese + IVA", per: "",
+          n: "Medio", p: "Crescita costante", per: "",
           d: "Presenza editoriale completa. Contenuti, copertura e strategia trimestrale — il livello in cui la crescita si vede davvero.",
           items: ["Tutto del piano Base", "+2 pubblicazioni extra", "Sessioni fotografiche", "Copertura di partite", "Reels e stories montati", "Reporting mensile", "Strategia trimestrale"],
         },
         {
-          n: "Premium", p: "Su misura", per: "",
+          n: "Premium", p: "Massimo coinvolgimento", per: "",
           d: "Dipartimento di marketing esternalizzato. Team dedicato, strategia 360 e audiovisivo avanzato per club con ambizione di marca.",
           items: ["Tutto del piano Medio", "Presentazione giocatori", "Branding e restyling", "Sito istituzionale", "Team dedicato"],
         },
