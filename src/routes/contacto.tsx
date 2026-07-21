@@ -26,6 +26,7 @@ export default function Contacto() {
   const [state, handleSubmit] = useForm((import.meta.env.VITE_FORMSPREE_ID as string) || "mlgvddrz");
   const fields = t<Record<string, string>>("contacto.fields");
   const planOptions = t<string[]>("contacto.planOptions");
+  const contactoOptions = t<string[]>("contacto.contactoOptions");
 
   return (
     <div className="bg-black text-white min-h-screen">
@@ -120,6 +121,12 @@ export default function Contacto() {
                 <Field label={fields.plan} htmlFor="c-plan">
                   <select id="c-plan" name="plan" className="bg-black border-b border-white/30 py-3 font-semibold text-white focus:outline-none focus:border-white">
                     {planOptions.map((p) => <option key={p}>{p}</option>)}
+                  </select>
+                </Field>
+                <Field label={fields.contacto} htmlFor="c-contacto" required>
+                  <select id="c-contacto" required aria-required="true" name="contacto_preferido" defaultValue="" className="bg-black border-b border-white/30 py-3 font-semibold text-white focus:outline-none focus:border-white">
+                    <option value="" disabled>—</option>
+                    {contactoOptions.map((p) => <option key={p} value={p}>{p}</option>)}
                   </select>
                 </Field>
                 <Field label={fields.mensaje} htmlFor="c-msg" required>
