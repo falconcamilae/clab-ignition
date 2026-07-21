@@ -100,9 +100,9 @@ export const translations = {
     },
     planes: {
       label: "Planes",
-      title1: "No es una tarifa.",
-      title2: "Es una forma de trabajar.",
-      lead: "Todos los planes son a medida y pensados para crecer contigo. Tres niveles según cuánto entramos en el club — puedes empezar por uno y crecer cuando el proyecto lo pida. Sin permanencia.",
+      title1: "Cada proyecto tiene un plan de juego.",
+      title2: "Cada inversión, un propósito.",
+      lead: "Tres niveles de acompañamiento, adaptados al momento de tu club o proyecto. Empieza con el que mejor encaje hoy y evoluciona cuando el crecimiento lo pida. Sin permanencia.",
       recommended: "Recomendado",
       ctaBtn: "Reservar reunión",
       list: [
