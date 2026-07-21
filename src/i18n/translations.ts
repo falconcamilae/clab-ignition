@@ -584,7 +584,7 @@ export const translations = {
         {
           n: "Premium", p: "Massimo coinvolgimento", per: "",
           d: "Dipartimento di marketing esternalizzato. Team dedicato, strategia 360 e audiovisivo avanzato per club e progetti con ambizione di marca.",
-          items: ["Tutto del piano Medio", "Branding e restyling", "Sito istituzionale", "Analitica web", "Team dedicato"],
+          items: ["Tutto del piano Medio", "Branding e restyling", "Sito istituzionale", "Analitica web", "Analisi degli investimenti", "Canali pubblicitari esterni non organici", "Team dedicato"],
         },
       ],
     },
