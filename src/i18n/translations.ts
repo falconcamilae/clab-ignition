@@ -341,18 +341,18 @@ export const translations = {
       list: [
         {
           n: "Basic", p: "Starting point", per: "",
-          d: "Steady monthly support. For clubs that want to start building presence with order and judgement.",
-          items: ["8 posts per month", "Brand templates", "Editorial calendar", "Email support"],
+          d: "Monthly support. For those who want to start building presence with order and judgement.",
+          items: ["One post per week of the month", "Brand templates", "Editorial calendar", "Email support", "Monthly analysis at month end"],
         },
         {
           n: "Medium", p: "Sustained growth", per: "",
-          d: "Full editorial presence. Content, coverage and quarterly strategy — the level where real growth shows.",
-          items: ["Everything in Basic plan", "+2 extra posts", "Photo sessions", "Match coverage", "Edited reels and stories", "Monthly reporting", "Quarterly strategy"],
+          d: "Full editorial presence. Content, editing, fortnightly support and quarterly strategy — the level where real growth shows.",
+          items: ["Everything in Basic plan", "+2 extra posts", "Photo sessions", "Coverage of sports sessions", "Edited reels and stories", "Monthly reporting", "Quarterly strategy"],
         },
         {
           n: "Premium", p: "Full involvement", per: "",
-          d: "Outsourced marketing department. Dedicated team, 360 strategy and advanced audiovisual for clubs with brand ambition.",
-          items: ["Everything in Medium", "Player presentations", "Branding and redesign", "Institutional website", "Dedicated team"],
+          d: "Outsourced marketing department. Dedicated team, 360 strategy and advanced audiovisual for clubs and projects with brand ambition.",
+          items: ["Everything in Medium", "Branding and redesign", "Institutional website", "Web analytics", "Dedicated team"],
         },
       ],
     },
