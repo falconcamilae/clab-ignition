@@ -257,9 +257,9 @@ export const translations = {
       servicesTitle: "Specialisation",
       viewAll: "See full method",
       services: [
-        { t: "Branding", d: "We build identities that are recognised." },
-        { t: "Social Media", d: "Constant editorial presence. Strategy, calendar and community — so the club exists beyond match day." },
-        { t: "Digital Optimisation", d: "Being found where it matters. Web, local SEO and acquisition built for real members, players and families." },
+        { t: "Branding", d: "We build identities that are recognised — professional and original." },
+        { t: "Social Media", d: "Editorial presence. Only what's needed, never invasive. Strategy, calendar and community building so your club and brand are visible beyond the game." },
+        { t: "Digital Optimisation", d: "Being found where it matters. Web, local and organic SEO. An acquisition system tailored to each sector." },
         { t: "Audiovisual", d: "Photography and video editing that convey what is lived inside your sports brand." },
       ],
       videoLabel: "Our gaze",
@@ -268,7 +268,7 @@ export const translations = {
       videoCaptionPrefix: "Piece",
       plansLabel: "Ways of working",
       plansTitle: "Three levels of involvement",
-      plansSubtext: "Every club is in a different moment. These three levels mark how deep we go: from steady monthly presence to acting as your in-house marketing team.",
+      plansSubtext: "Every club, sports centre and brand is in a different moment. These three levels mark how deep we go: from supporting your presence from the outside to joining you as an in-house marketing team. We work WITH you.",
       viewDetail: "See our method",
       plans: [
         { n: "Basic", p: "Starting point" },
@@ -277,8 +277,8 @@ export const translations = {
       ],
       planCta: "See this level",
       quote: '"We create marketing so that those who wear your brand wear it with pride."',
-      ctaTitle1: "Shall we talk",
-      ctaTitle2: "about your club?",
+      ctaTitle1: "Ready to be",
+      ctaTitle2: "visible?",
       ctaBtn: "Book a meeting",
     },
     servicios: {
