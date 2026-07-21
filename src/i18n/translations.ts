@@ -333,9 +333,9 @@ export const translations = {
     },
     planes: {
       label: "Plans",
-      title1: "Not a price list.",
-      title2: "A way of working.",
-      lead: "Every plan is tailored and designed to grow with you. Three levels according to how far we go inside the club — start with one and grow when the project asks for it. No lock-in.",
+      title1: "Every project has a game plan.",
+      title2: "Every investment, a purpose.",
+      lead: "Three levels of support, adapted to the moment your club or project is in. Start with the one that fits best today and evolve when growth asks for it. No lock-in.",
       recommended: "Recommended",
       ctaBtn: "Book a meeting",
       list: [
