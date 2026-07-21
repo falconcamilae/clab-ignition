@@ -565,9 +565,9 @@ export const translations = {
     },
     planes: {
       label: "Piani",
-      title1: "Non è un listino.",
-      title2: "È un modo di lavorare.",
-      lead: "Tutti i piani sono su misura e pensati per crescere con te. Tre livelli in base a quanto entriamo nel club — puoi iniziare da uno e crescere quando il progetto lo chiede. Senza vincoli.",
+      title1: "Ogni progetto ha un piano di gioco.",
+      title2: "Ogni investimento, uno scopo.",
+      lead: "Tre livelli di accompagnamento, adattati al momento del tuo club o progetto. Inizia con quello che oggi si adatta meglio ed evolvi quando la crescita lo richiede. Senza vincoli.",
       recommended: "Consigliato",
       ctaBtn: "Prenota un incontro",
       list: [
