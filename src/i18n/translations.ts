@@ -485,7 +485,7 @@ export const translations = {
   },
 
   it: {
-    nav: { inicio: "Home", servicios: "Servizi", planes: "Piani", nosotros: "Chi siamo", contacto: "Contatti" },
+    nav: { inicio: "Home", servicios: "Servizi", planes: "Piani", nosotros: "Meta", contacto: "Contatti" },
     home: {
       heroLabel: "Marketing Sportivo · Málaga",
       heroTitle1: "Sport.",
