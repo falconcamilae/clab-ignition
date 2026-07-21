@@ -37,6 +37,9 @@ export default function Contacto() {
           <h1 className="text-5xl md:text-8xl font-bold uppercase tracking-tight leading-[0.95]">
             {t<string>("contacto.title1")} <span className="italic font-light">{t<string>("contacto.title2")}</span>
           </h1>
+          <p className="mt-8 inline-block bg-white text-black px-6 py-3 text-sm md:text-base uppercase tracking-widest font-bold">
+            {t<string>("contacto.cta")}
+          </p>
         </div>
       </section>
 
