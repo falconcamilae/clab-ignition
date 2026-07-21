@@ -102,22 +102,22 @@ export const translations = {
       label: "Planes",
       title1: "No es una tarifa.",
       title2: "Es una forma de trabajar.",
-      lead: "Tres niveles según cuánto entramos en el club. Puedes empezar por uno y crecer cuando el proyecto lo pida. Sin permanencia.",
+      lead: "Todos los planes son a medida y pensados para crecer contigo. Tres niveles según cuánto entramos en el club — puedes empezar por uno y crecer cuando el proyecto lo pida. Sin permanencia.",
       recommended: "Recomendado",
       ctaBtn: "Reservar reunión",
       list: [
         {
-          n: "Básico", p: "Desde 120€/mes + IVA", per: "",
+          n: "Básico", p: "Punto de partida", per: "",
           d: "Acompañamiento mensual constante. Para clubes que quieren empezar a construir presencia con orden y criterio.",
           items: ["8 publicaciones al mes", "Plantillas de marca", "Calendario editorial", "Soporte por email"],
         },
         {
-          n: "Medio", p: "Desde 250€/mes + IVA", per: "",
+          n: "Medio", p: "Crecimiento sostenido", per: "",
           d: "Presencia editorial completa. Contenido, cobertura y estrategia trimestral — el nivel en el que se nota el crecimiento real.",
           items: ["Todo lo del Plan Básico", "+2 publicaciones extras", "Sesiones de fotografía", "Cobertura de partidos", "Reels y stories editados", "Reporting mensual", "Estrategia trimestral"],
         },
         {
-          n: "Premium", p: "A medida", per: "",
+          n: "Premium", p: "Máxima implicación", per: "",
           d: "Departamento de marketing externalizado. Equipo dedicado, estrategia 360 y audiovisual avanzado para clubes con ambición de marca.",
           items: ["Todo lo del Plan Medio", "Presentación de jugadores", "Branding y rediseño", "Web institucional", "Equipo dedicado"],
         },
