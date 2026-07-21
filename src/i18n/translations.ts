@@ -257,10 +257,10 @@ export const translations = {
       servicesTitle: "Specialisation",
       viewAll: "See full method",
       services: [
-        { t: "Branding", d: "Identity that lasts decades. Crest, typography and visual system designed as club heritage, not as a campaign." },
+        { t: "Branding", d: "We build identities that are recognised." },
         { t: "Social Media", d: "Constant editorial presence. Strategy, calendar and community — so the club exists beyond match day." },
         { t: "Digital Optimisation", d: "Being found where it matters. Web, local SEO and acquisition built for real members, players and families." },
-        { t: "Audiovisual", d: "The club's own gaze, told from the inside. Video and photo that show what the stands don't see." },
+        { t: "Audiovisual", d: "Photography and video editing that convey what is lived inside your sports brand." },
       ],
       videoLabel: "Our gaze",
       videoTitle1: "How we look",
