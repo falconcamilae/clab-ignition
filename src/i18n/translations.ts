@@ -53,7 +53,7 @@ export const translations = {
       quote: '"Creamos marketing para que quienes llevan tu marca la lleven con orgullo."',
       ctaTitle1: "¿Listos para",
       ctaTitle2: "hacerte visible?",
-      ctaBtn: "Reservar reunión",
+      ctaBtn: "Agenda una llamada, sin compromiso",
     },
     servicios: {
       label: "Método",
