@@ -247,7 +247,7 @@ export const translations = {
 
 
   en: {
-    nav: { inicio: "Home", servicios: "Services", planes: "Plans", nosotros: "About", contacto: "Contact" },
+    nav: { inicio: "Home", servicios: "Services", planes: "Plans", nosotros: "Meta", contacto: "Contact" },
     home: {
       heroLabel: "Sports Marketing · Málaga",
       heroTitle1: "Sport.",
