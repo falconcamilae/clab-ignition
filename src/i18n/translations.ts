@@ -601,15 +601,16 @@ export const translations = {
         "Lavoriamo come parte della squadra, non come fornitori esterni. Entrare in un club non è eseguire un contratto — è capire cosa rappresenta per la sua gente e rispondere con criterio.",
         "La passione c'è già nel tuo club. Noi la rendiamo visibile.",
       ],
-      valuesLabel: "Criterio",
-      valuesTitle: "Ciò che ci muove.",
+      valuesLabel: "La nostra missione",
+      valuesTitle: "La differenza non sta nel fare di più, ma nel decidere meglio.",
       values: [
         ["Focus", "Solo sport. È l'unica cosa che lavoriamo."],
-        ["Criterio", "Ogni decisione si spiega. Nessuna si improvvisa."],
-        ["Vicinanza", "Lavoriamo dentro il club, non da fuori."],
-        ["Passione", "Viviamo ciò che comunichiamo."],
+        ["Criterio", "Ogni decisione ha un perché. Nulla si improvvisa."],
+        ["Squadra", "Lavoriamo con te, non per te."],
+        ["Proposito", "Ogni azione risponde a un obiettivo, non a una tendenza."],
       ],
-      ctaTitle: "Parliamo del tuo club?",
+      ctaTitle: "Parliamone?",
+
       ctaBtn: "Prenota un incontro",
     },
     contacto: {
