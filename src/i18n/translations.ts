@@ -299,7 +299,7 @@ export const translations = {
       quote: '"We create marketing so that those who wear your brand wear it with pride."',
       ctaTitle1: "Ready to be",
       ctaTitle2: "visible?",
-      ctaBtn: "Book a meeting",
+      ctaBtn: "Book a call, no commitment",
     },
     servicios: {
       label: "Method",
