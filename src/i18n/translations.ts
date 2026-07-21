@@ -10,11 +10,11 @@ export const translations = {
   es: {
     nav: { inicio: "Inicio", servicios: "Servicios", planes: "Planes", nosotros: "Nosotros", contacto: "Contacto" },
     home: {
-      heroLabel: "Agencia de marketing deportivo · Málaga",
-      heroTitle1: "Solo deporte.",
-      heroTitle2: "Solo criterio.",
+      heroLabel: "Marketing Deportivo · Málaga",
+      heroTitle1: "Deporte.",
+      heroTitle2: "Criterio.",
       heroTitle3: "Marketing hecho",
-      heroTitle4: "desde dentro.",
+      heroTitle4: "desde adentro.",
       ctaPlan: "Reservar una conversación",
       ctaServices: "Ver método",
       manifestoLabel: "Cómo pensamos",
