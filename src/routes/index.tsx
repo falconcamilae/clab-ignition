@@ -80,38 +80,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="bg-black text-white py-24 md:py-32 px-5 md:px-10">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
-            <div>
-              <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">{t<string>("home.servicesLabel")}</p>
-              <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">{t<string>("home.servicesTitle")}</h2>
-            </div>
-            <Link to="/servicios" className="inline-flex items-center gap-2 text-sm uppercase tracking-widest hover:opacity-60">
-              {t<string>("home.viewAll")} <ArrowUpRight size={16}/>
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
-            {services.map((s, i) => (
-              <motion.div
-                key={s.t}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="bg-black p-8 md:p-10 hover:bg-white hover:text-black transition-colors duration-500 group cursor-default"
-              >
-                <span className="text-xs font-mono opacity-50">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="mt-6 text-2xl md:text-3xl font-bold uppercase">{s.t}</h3>
-                <p className="mt-4 text-sm leading-relaxed opacity-70 group-hover:opacity-100">{s.d}</p>
-                <ArrowUpRight size={20} className="mt-8 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"/>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* WHY CLAB */}
       <section className="py-24 md:py-32 px-5 md:px-10">
         <div className="mx-auto max-w-7xl">
@@ -144,6 +112,39 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* SERVICES */}
+      <section className="bg-black text-white py-24 md:py-32 px-5 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div>
+              <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">{t<string>("home.servicesLabel")}</p>
+              <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">{t<string>("home.servicesTitle")}</h2>
+            </div>
+            <Link to="/servicios" className="inline-flex items-center gap-2 text-sm uppercase tracking-widest hover:opacity-60">
+              {t<string>("home.viewAll")} <ArrowUpRight size={16}/>
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
+            {services.map((s, i) => (
+              <motion.div
+                key={s.t}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="bg-black p-8 md:p-10 hover:bg-white hover:text-black transition-colors duration-500 group cursor-default"
+              >
+                <span className="text-xs font-mono opacity-50">{String(i + 1).padStart(2, "0")}</span>
+                <h3 className="mt-6 text-2xl md:text-3xl font-bold uppercase">{s.t}</h3>
+                <p className="mt-4 text-sm leading-relaxed opacity-70 group-hover:opacity-100">{s.d}</p>
+                <ArrowUpRight size={20} className="mt-8 opacity-50 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"/>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
 
       {/* PLANS */}
