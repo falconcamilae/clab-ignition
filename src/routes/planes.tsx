@@ -20,7 +20,7 @@ export const Route = createFileRoute("/planes")({
   }),
 });
 
-type Plan = { n: string; p: string; per: string; d: string; items: string[] };
+type Plan = { n: string; p: string; per: string; d: string; items: string[]; phase?: string };
 
 export default function Planes() {
   const { t } = useI18n();
@@ -44,6 +44,7 @@ export default function Planes() {
                 <div className="mt-6">
                   <span className="text-3xl md:text-4xl font-bold leading-tight">{p.p}</span>
                 </div>
+                {p.phase && <p className="mt-3 text-sm font-semibold opacity-80 leading-snug">{p.phase}</p>}
                 <p className="mt-4 text-sm opacity-70 leading-relaxed">{p.d}</p>
                 <ul className="mt-8 space-y-3 flex-1">
                   {p.items.map((it) => (
