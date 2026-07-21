@@ -368,15 +368,16 @@ export const translations = {
         "We work as part of the team, not as external suppliers. Stepping inside a club isn't fulfilling a contract — it's understanding what it means to its people, and answering with judgement.",
         "The passion is already in your club. We make it visible.",
       ],
-      valuesLabel: "Judgement",
-      valuesTitle: "What drives us.",
+      valuesLabel: "Our mission",
+      valuesTitle: "The difference isn't doing more, but deciding better.",
       values: [
         ["Focus", "Sport only. It's the only thing we work on."],
-        ["Judgement", "Every decision is explained. None is improvised."],
-        ["Closeness", "We work inside the club, not from the outside."],
-        ["Passion", "We live what we communicate."],
+        ["Judgement", "Every decision has a reason. Nothing is improvised."],
+        ["Team", "We work with you, not for you."],
+        ["Purpose", "Every action answers to an objective, not a trend."],
       ],
-      ctaTitle: "Shall we talk about your club?",
+      ctaTitle: "Shall we talk?",
+
       ctaBtn: "Book a meeting",
     },
     contacto: {
