@@ -123,6 +123,12 @@ export default function Contacto() {
                     {planOptions.map((p) => <option key={p}>{p}</option>)}
                   </select>
                 </Field>
+                <Field label={fields.contacto} htmlFor="c-contacto" required>
+                  <select id="c-contacto" required aria-required="true" name="contacto_preferido" defaultValue="" className="bg-black border-b border-white/30 py-3 font-semibold text-white focus:outline-none focus:border-white">
+                    <option value="" disabled>—</option>
+                    {contactoOptions.map((p) => <option key={p} value={p}>{p}</option>)}
+                  </select>
+                </Field>
                 <Field label={fields.mensaje} htmlFor="c-msg" required>
                   <textarea id="c-msg" required aria-required="true" name="mensaje" rows={4} className="bg-transparent border-b border-white/30 py-3 font-semibold text-white focus:outline-none focus:border-white resize-none" />
                 </Field>
