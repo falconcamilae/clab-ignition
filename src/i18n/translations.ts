@@ -24,10 +24,10 @@ export const translations = {
       servicesTitle: "Especialización",
       viewAll: "Ver método completo",
       services: [
-        { t: "Branding", d: "Identidad que sostiene décadas. Escudo, tipografía y sistema visual pensados como patrimonio del club, no como campaña." },
+        { t: "Branding", d: "Construimos identidades que se reconocen." },
         { t: "Redes Sociales", d: "Presencia editorial constante. Estrategia, calendario y comunidad — para que el club exista fuera del partido." },
         { t: "Optimización Digital", d: "Ser encontrado donde importa. Web, SEO local y captación pensados para socios, jugadores y familias reales." },
-        { t: "Audiovisual", d: "La mirada del club, contada desde dentro. Vídeo y foto que muestran lo que la grada no ve." },
+        { t: "Audiovisual", d: "Fotografía y edición de vídeos que transmiten lo que se vive dentro de tu marca deportiva." },
       ],
       videoLabel: "Nuestra mirada",
       videoTitle1: "Cómo miramos",
