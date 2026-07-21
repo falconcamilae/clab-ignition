@@ -114,19 +114,19 @@ export const translations = {
       ctaBtn: "Reservar reunión",
       list: [
         {
-          n: "Básico", p: "Punto de partida", per: "",
+          n: "Básico", p: "Punto de partida", per: "", phase: "Fases 1-2: Escucha e Identidad, sostenidas mes a mes.",
           d: "Acompañamiento mensual. Para quienes quieren empezar a construir presencia con orden y criterio.",
           items: ["Una publicación por cada semana del mes", "Plantillas de marca", "Calendario editorial", "Soporte por email", "Análisis mensual a final de mes"],
         },
         {
-          n: "Medio", p: "Crecimiento sostenido", per: "",
+          n: "Medio", p: "Crecimiento sostenido", per: "", phase: "Fases 1-4 completas: entra Voz y Contenido con mayor profundidad.",
           d: "Presencia editorial completa. Contenido, edición, acompañamiento cada 15 días y estrategia trimestral — el nivel en el que se nota el crecimiento real.",
           items: ["Todo lo del Plan Básico", "+2 publicaciones extras", "Sesiones de fotografía", "Cobertura de sesiones deportivas", "Reels y stories editados", "Reporting mensual", "Estrategia trimestral"],
         },
         {
-          n: "Premium", p: "Máxima implicación", per: "",
+          n: "Premium", p: "Máxima implicación", per: "", phase: "Fases 1-4 al máximo nivel, más Fase 5 cuando el club ya tiene base para sostenerla.",
           d: "Departamento de marketing externalizado. Equipo dedicado, estrategia 360 y audiovisual avanzado para clubes y proyectos con ambición de marca.",
-          items: ["Todo lo del Plan Medio", "Branding y rediseño", "Web institucional", "Analítica web", "Análisis de inversión", "Canales de publicidad externa no orgánico", "Equipo dedicado"],
+          items: ["Todo lo del Plan Medio", "Branding y rediseño", "Web institucional", "Analítica web", "Análisis de inversión", "Canales de publicidad externa — se activan solo si las fases anteriores ya sostienen el mensaje.", "Equipo dedicado"],
         },
       ],
     },
