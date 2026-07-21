@@ -15,6 +15,8 @@ export const Route = createFileRoute("/servicios")({
       { property: "og:title", content: "Servicios — In The CLAB" },
       { property: "og:description", content: "Branding, redes sociales, optimización digital y audiovisual para clubes y academias deportivas." },
       { property: "og:url", content: "https://clabagency.com/servicios" },
+      { property: "og:image", content: "https://clabagency.com/media/og-image.jpg" },
+      { name: "twitter:image", content: "https://clabagency.com/media/og-image.jpg" },
     ],
     links: [{ rel: "canonical", href: "https://clabagency.com/servicios" }],
   }),
