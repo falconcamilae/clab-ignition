@@ -108,18 +108,18 @@ export const translations = {
       list: [
         {
           n: "Básico", p: "Punto de partida", per: "",
-          d: "Acompañamiento mensual constante. Para clubes que quieren empezar a construir presencia con orden y criterio.",
-          items: ["8 publicaciones al mes", "Plantillas de marca", "Calendario editorial", "Soporte por email"],
+          d: "Acompañamiento mensual. Para quienes quieren empezar a construir presencia con orden y criterio.",
+          items: ["Una publicación por cada semana del mes", "Plantillas de marca", "Calendario editorial", "Soporte por email", "Análisis mensual a final de mes"],
         },
         {
           n: "Medio", p: "Crecimiento sostenido", per: "",
-          d: "Presencia editorial completa. Contenido, cobertura y estrategia trimestral — el nivel en el que se nota el crecimiento real.",
-          items: ["Todo lo del Plan Básico", "+2 publicaciones extras", "Sesiones de fotografía", "Cobertura de partidos", "Reels y stories editados", "Reporting mensual", "Estrategia trimestral"],
+          d: "Presencia editorial completa. Contenido, edición, acompañamiento cada 15 días y estrategia trimestral — el nivel en el que se nota el crecimiento real.",
+          items: ["Todo lo del Plan Básico", "+2 publicaciones extras", "Sesiones de fotografía", "Cobertura de sesiones deportivas", "Reels y stories editados", "Reporting mensual", "Estrategia trimestral"],
         },
         {
           n: "Premium", p: "Máxima implicación", per: "",
-          d: "Departamento de marketing externalizado. Equipo dedicado, estrategia 360 y audiovisual avanzado para clubes con ambición de marca.",
-          items: ["Todo lo del Plan Medio", "Presentación de jugadores", "Branding y rediseño", "Web institucional", "Equipo dedicado"],
+          d: "Departamento de marketing externalizado. Equipo dedicado, estrategia 360 y audiovisual avanzado para clubes y proyectos con ambición de marca.",
+          items: ["Todo lo del Plan Medio", "Branding y rediseño", "Web institucional", "Analítica web", "Equipo dedicado"],
         },
       ],
     },
