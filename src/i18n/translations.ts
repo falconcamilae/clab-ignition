@@ -8,7 +8,7 @@ export const LANGS: { code: Lang; label: string; flag: string }[] = [
 
 export const translations = {
   es: {
-    nav: { inicio: "Inicio", servicios: "Servicios", planes: "Planes", nosotros: "Nosotros", contacto: "Contacto" },
+    nav: { inicio: "Inicio", servicios: "Servicios", planes: "Planes", nosotros: "Meta", contacto: "Contacto" },
     home: {
       heroLabel: "Marketing Deportivo · Málaga",
       heroTitle1: "Deporte.",
