@@ -100,9 +100,9 @@ export const translations = {
     },
     planes: {
       label: "Planes",
-      title1: "No es una tarifa.",
-      title2: "Es una forma de trabajar.",
-      lead: "Todos los planes son a medida y pensados para crecer contigo. Tres niveles según cuánto entramos en el club — puedes empezar por uno y crecer cuando el proyecto lo pida. Sin permanencia.",
+      title1: "Cada proyecto tiene un plan de juego.",
+      title2: "Cada inversión, un propósito.",
+      lead: "Tres niveles de acompañamiento, adaptados al momento de tu club o proyecto. Empieza con el que mejor encaje hoy y evoluciona cuando el crecimiento lo pida. Sin permanencia.",
       recommended: "Recomendado",
       ctaBtn: "Reservar reunión",
       list: [
@@ -119,7 +119,7 @@ export const translations = {
         {
           n: "Premium", p: "Máxima implicación", per: "",
           d: "Departamento de marketing externalizado. Equipo dedicado, estrategia 360 y audiovisual avanzado para clubes y proyectos con ambición de marca.",
-          items: ["Todo lo del Plan Medio", "Branding y rediseño", "Web institucional", "Analítica web", "Equipo dedicado"],
+          items: ["Todo lo del Plan Medio", "Branding y rediseño", "Web institucional", "Analítica web", "Análisis de inversión", "Canales de publicidad externa no orgánico", "Equipo dedicado"],
         },
       ],
     },
@@ -333,9 +333,9 @@ export const translations = {
     },
     planes: {
       label: "Plans",
-      title1: "Not a price list.",
-      title2: "A way of working.",
-      lead: "Every plan is tailored and designed to grow with you. Three levels according to how far we go inside the club — start with one and grow when the project asks for it. No lock-in.",
+      title1: "Every project has a game plan.",
+      title2: "Every investment, a purpose.",
+      lead: "Three levels of support, adapted to the moment your club or project is in. Start with the one that fits best today and evolve when growth asks for it. No lock-in.",
       recommended: "Recommended",
       ctaBtn: "Book a meeting",
       list: [
@@ -352,7 +352,7 @@ export const translations = {
         {
           n: "Premium", p: "Full involvement", per: "",
           d: "Outsourced marketing department. Dedicated team, 360 strategy and advanced audiovisual for clubs and projects with brand ambition.",
-          items: ["Everything in Medium", "Branding and redesign", "Institutional website", "Web analytics", "Dedicated team"],
+          items: ["Everything in Medium", "Branding and redesign", "Institutional website", "Web analytics", "Investment analysis", "External non-organic advertising channels", "Dedicated team"],
         },
       ],
     },
@@ -565,9 +565,9 @@ export const translations = {
     },
     planes: {
       label: "Piani",
-      title1: "Non è un listino.",
-      title2: "È un modo di lavorare.",
-      lead: "Tutti i piani sono su misura e pensati per crescere con te. Tre livelli in base a quanto entriamo nel club — puoi iniziare da uno e crescere quando il progetto lo chiede. Senza vincoli.",
+      title1: "Ogni progetto ha un piano di gioco.",
+      title2: "Ogni investimento, uno scopo.",
+      lead: "Tre livelli di accompagnamento, adattati al momento del tuo club o progetto. Inizia con quello che oggi si adatta meglio ed evolvi quando la crescita lo richiede. Senza vincoli.",
       recommended: "Consigliato",
       ctaBtn: "Prenota un incontro",
       list: [
@@ -584,7 +584,7 @@ export const translations = {
         {
           n: "Premium", p: "Massimo coinvolgimento", per: "",
           d: "Dipartimento di marketing esternalizzato. Team dedicato, strategia 360 e audiovisivo avanzato per club e progetti con ambizione di marca.",
-          items: ["Tutto del piano Medio", "Branding e restyling", "Sito istituzionale", "Analitica web", "Team dedicato"],
+          items: ["Tutto del piano Medio", "Branding e restyling", "Sito istituzionale", "Analitica web", "Analisi degli investimenti", "Canali pubblicitari esterni non organici", "Team dedicato"],
         },
       ],
     },
