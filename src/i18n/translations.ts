@@ -303,6 +303,7 @@ export const translations = {
       ctaTitle1: "Ready to be",
       ctaTitle2: "visible?",
       ctaBtn: "Book a call, no commitment",
+      ctaNote: "Free 30-minute consultation about your project. Let's clear up your questions and discover why working with us makes the difference.",
     },
     servicios: {
       label: "Method",
