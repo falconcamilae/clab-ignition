@@ -54,6 +54,7 @@ export const translations = {
       ctaTitle1: "¿Listos para",
       ctaTitle2: "hacerte visible?",
       ctaBtn: "Agenda una llamada, sin compromiso",
+      ctaNote: "Consultoría gratuita de 30 minutos sobre tu proyecto. Resolvamos juntos tus dudas y descubre por qué trabajar con nosotros marca la diferencia.",
     },
     servicios: {
       label: "Método",
@@ -302,6 +303,7 @@ export const translations = {
       ctaTitle1: "Ready to be",
       ctaTitle2: "visible?",
       ctaBtn: "Book a call, no commitment",
+      ctaNote: "Free 30-minute consultation about your project. Let's clear up your questions and discover why working with us makes the difference.",
     },
     servicios: {
       label: "Method",
@@ -549,6 +551,7 @@ export const translations = {
       ctaTitle1: "Pronti a farvi",
       ctaTitle2: "vedere?",
       ctaBtn: "Prenota una chiamata, senza impegno",
+      ctaNote: "Consulenza gratuita di 30 minuti sul tuo progetto. Chiariamo insieme i tuoi dubbi e scopri perché lavorare con noi fa la differenza.",
     },
     servicios: {
       label: "Metodo",

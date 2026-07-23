@@ -204,6 +204,9 @@ export default function Home() {
           <Link to="/contacto" className="mt-12 inline-flex items-center gap-3 bg-white text-black px-8 py-5 text-sm uppercase tracking-widest font-semibold hover:bg-white/90">
             {t<string>("home.ctaBtn")} <ArrowRight size={16}/>
           </Link>
+          <p className="mt-8 max-w-2xl mx-auto text-sm md:text-base text-white/70 leading-relaxed">
+            {t<string>("home.ctaNote")}
+          </p>
         </div>
       </section>
 
