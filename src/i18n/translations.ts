@@ -551,6 +551,7 @@ export const translations = {
       ctaTitle1: "Pronti a farvi",
       ctaTitle2: "vedere?",
       ctaBtn: "Prenota una chiamata, senza impegno",
+      ctaNote: "Consulenza gratuita di 30 minuti sul tuo progetto. Chiariamo insieme i tuoi dubbi e scopri perché lavorare con noi fa la differenza.",
     },
     servicios: {
       label: "Metodo",
