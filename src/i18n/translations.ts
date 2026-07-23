@@ -54,6 +54,7 @@ export const translations = {
       ctaTitle1: "¿Listos para",
       ctaTitle2: "hacerte visible?",
       ctaBtn: "Agenda una llamada, sin compromiso",
+      ctaNote: "Consultoría gratuita de 30 minutos sobre tu proyecto. Resolvamos juntos tus dudas y descubre por qué trabajar con nosotros marca la diferencia.",
     },
     servicios: {
       label: "Método",
